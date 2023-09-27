@@ -28,6 +28,17 @@ module.exports = {
       'break5': '364px',
       'vertical': '768px',
     },
+    keyframes: {
+      floatDown: {
+        '0%': { opacity: 0 },
+        '25%': { opacity: 1 },
+        '40%': { opacity: 1 },
+        '100%': { transform: 'translateY(65vh)', opacity: 0 },
+      }
+    },
+    animation: {
+      'cascade': 'floatDown 5s ease-in-out forwards',
+    },
   },
   plugins: [
     require('tailwindcss-animated')
