@@ -15,8 +15,13 @@ module.exports = {
       fontFamily: {
         "maven": ["MavenPro"],
         "bowlby": ["BowlbyOneSC"],
-        "meriweather": ["Merriweather"]
+        "meriweather": ["Merriweather"],
+        "inter": ["Inter"],
       },
+      boxShadow: {
+        'green': '-15px 15px #00917B',
+        'green-sm': '-5px 5px #00917B',
+      }
     },
     screens: {
       'mid': '376px',
@@ -29,15 +34,31 @@ module.exports = {
       'vertical': '768px',
     },
     keyframes: {
-      floatDown: {
+      cascade: {
         '0%': { opacity: 0 },
         '25%': { opacity: 1 },
         '40%': { opacity: 1 },
         '100%': { transform: 'translateY(65vh)', opacity: 0 },
+      },
+      bounce: {
+        '0%': { transform: 'translateY(-0%)' },
+        '50%': { transform: 'translateY(5%)' },
+        '100%': { transform: 'translateY(0%)' }
+      },
+      slideInRight: {
+        '0%': { transform: 'translateX(-50%) skew(-12deg)', opacity: 0, },
+        '100%': { transform: 'translateX(0%) skew(-12deg)', opacity: 1 }
+      },
+      slideInLeft: {
+        '0%': { transform: 'translateX(50%) skew(-12deg)', opacity: 0, },
+        '100%': { transform: 'translateX(0%) skew(-12deg)', opacity: 1 }
       }
     },
     animation: {
-      'cascade': 'floatDown 5s ease-in-out forwards',
+      'cascade': 'cascade 5s ease-in-out forwards',
+      'bounce': 'bounce 1.5s ease-in-out infinite',
+      'slide-in-right': 'slideInRight 0.7s ease-in-out',
+      'slide-in-left': 'slideInLeft 0.7s ease-in-out'
     },
   },
   plugins: [

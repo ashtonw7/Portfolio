@@ -1,17 +1,17 @@
-import Image from 'next/image'
+import Image from 'next/image';
 import { useState, useEffect } from "react";
 
-const ufo = '/assets/images/aliens.png'
-const barrel = '/assets/images/barrel.png'
-const caveman = '/assets/images/caveman.png'
-const dolphin = '/assets/images/dolphins.png'
-const dodo = '/assets/images/dodo-birds.png'
-const jester = '/assets/images/jester.png'
-const yeti = '/assets/images/yeti.png'
-const boots = '/assets/images/duels.png'
-const apple = '/assets/images/history-book.png'
+const ufo = '/assets/images/aliens.png';
+const barrel = '/assets/images/barrel.png';
+const caveman = '/assets/images/caveman.png';
+const dolphin = '/assets/images/dolphins.png';
+const dodo = '/assets/images/dodo-birds.png';
+const jester = '/assets/images/jester.png';
+const yeti = '/assets/images/yeti.png';
+const boots = '/assets/images/duels.png';
+const apple = '/assets/images/history-book.png';
 
-let imageLinks = [ufo, barrel, caveman, dolphin, dodo, jester, yeti, boots, apple]
+let imageLinks = [ufo, barrel, caveman, dolphin, dodo, jester, yeti, boots, apple];
 
 const numImages = 9;
 
@@ -102,7 +102,7 @@ export default function FloatingImages(){
 
     return(
         <>
-            <div className='flex flex-row justify-center space-x-8'>
+            <div className='flex flex-row justify-center space-x-8 pt-10'>
 
                 { images }
 

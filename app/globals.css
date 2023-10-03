@@ -3,6 +3,28 @@ html {
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
   background-color: #FAF9F6;
+  scroll-behavior: smooth;
+}
+
+.doodle-border {
+  border-width: 12px;
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+  border-top-left-radius: 255px 5px;
+  border-top-right-radius: 5px 255px;
+  border-bottom-left-radius: 5px 255px;
+  border-bottom-right-radius: 255px 5px;
+}
+
+.doodle-border-dashed {
+  border-width: 12px;
+  border-style: dashed;
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+  border-top-left-radius: 255px 5px;
+  border-top-right-radius: 5px 255px;
+  border-bottom-left-radius: 5px 255px;
+  border-bottom-right-radius: 255px 5px;
 }
 
 @font-face {
@@ -18,6 +40,12 @@ html {
 @font-face {
   font-family: "Merriweather";
   src: url("../public/assets/fonts/MerriweatherSans-VariableFont_wght.ttf");
+}
+
+
+@font-face {
+  font-family: "Inter";
+  src: url("../public/assets/fonts/Inter-VariableFont_slnt\,wght.ttf");
 }
 
 @tailwind base;
