@@ -29,15 +29,16 @@ export default function ExperienceCard({image, place, title, text}: Props){
     
     return(
         <>
-            <div className="flex flex-col items-center bg-white doodle-border shadow-green h-[70%] w-[30rem] px-8 animate-fade-up">
-                <h2 className="mt-6 text-3xl font-bowlby font-extrabold text-center">
+            <div className="flex flex-col items-center md:justify-around mx-5 bg-white doodle-border shadow-green-sm md:shadow-green md:h-[80%] px-8 animate-fade-up">
+                <h2 className="mt-6 text-xl md:text-3xl font-bowlby font-extrabold text-center">
                     { place }
                 </h2>
-                <Image src={image} height="200" width="200" alt={image} className="my-2 p-3 shadow-green-sm border-[5px] border-black rounded-[500px]" />
-                <h3 className="text-[1.4rem] font-inter font-extrabold text-center whitespace-pre-wrap">
+                <Image src={image} height="100" width="100" alt={image} className="inline md:hidden my-2 p-3 shadow-green-sm border-[5px] border-black rounded-[500px]" />
+                <Image src={image} height="200" width="200" alt={image} className="hidden md:inline my-2 p-3 shadow-green-sm border-[5px] border-black rounded-[500px]" />
+                <h3 className="text-[1rem] md:text-[1.4rem] font-inter font-extrabold text-center whitespace-pre-wrap">
                     { title }
                 </h3>
-                <div className="text-xl font-inter font-semi mt-5 whitespace-pre-wrap">
+                <div className="text-lg md:text-xl font-inter font-semi mt-2 md:mt-5 whitespace-pre-wrap px-2 py-5">
                     { blurb }
                 </div>
             </div>

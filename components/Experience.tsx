@@ -3,10 +3,16 @@ import Link from "next/link";
 
 import ScrollArrow from "./ScrollArrow";
 import ExperienceCard from "./ExperienceCard";
+import ProficiencesCard from "./ProficienciesCard";
 
 type Props = {
-    handleSection: Function
-    isSelected: Boolean
+    handleSection: Function,
+    isSelected: Boolean,
+    height: number,
+    width: number,
+    topPadding: number,
+    arrowHeight: number,
+    arrowWidth: number,
 };
 
 let text = 'Lorem ipsum dolor sit amet, consectetur a, tempor ipsum. Praesent in nibh lobortis, mollis lorem a, ultricies purus. Nulla sit amet pretium ligula. Nulla pulvinar euismod nisl, porta accumsan nibh condimentum at. In molestie lorem et purus elementum maximus.'
@@ -27,15 +33,54 @@ let airForceBlurb = [
     "I lead a team of 20 Airmen, ensuring their well-being and mission success."
 ]
 
-export default function Experience({ handleSection, isSelected }: Props){
+export default function Experience({ handleSection, isSelected, height, width, topPadding, arrowHeight, arrowWidth }: Props){
     useEffect(() => {
         console.log("EXPERIENCE", isSelected)
     }, [isSelected]);
     
     return(
         <>
-            <section id="experience" className="relative"> 
-                <div className="flex items-center justify-around h-[100vh] bg-[#FDF7F1]">
+            <section id="experience" className="relative">
+                <div className="md:hidden">
+                    <div id="job1" className="flex flex-col items-center justify-center h-[100vh] pt-[60px]">
+                        <div className="relative h-full">
+                            <div className="h-full flex flex-col items-center ">
+                                <ExperienceCard image='/assets/images/aliens.png' place={yalePlace} title={yaleTitle} text={yaleBlurb} />
+                            </div>
+                            <ScrollArrow handleSection={handleSection} location="job2" up={false} height={arrowHeight} width={arrowWidth} />
+                        </div>
+                    </div>
+
+                    <div id="job2" className="flex flex-col items-center justify-center h-[100vh] pt-[60px]">
+                        <div className="relative h-full">
+                            <ExperienceCard image='/assets/images/aliens.png' place={airForcePlace} title={airForceTitle} text={airForceBlurb} />
+                            <ScrollArrow handleSection={handleSection} location="proficiencies" up={false} height={arrowHeight} width={arrowWidth} />
+                        </div>
+                    </div>
+
+                    <div id="proficiencies" className="flex flex-col items-center justify-center h-[100vh] pt-[60px]">
+                        <div className="relative h-full">
+                            <ProficiencesCard />
+                            <ScrollArrow handleSection={handleSection} location="projects" up={false} height={arrowHeight} width={arrowWidth} />
+                        </div>
+                    </div>
+                </div>
+
+                <div className="hidden md:flex justify-center h-[100dvh]">
+                    <div className="w-[90%] h-full flex pt-[60px]">
+                        <div className="flex flex-row mt-10 justify-between">
+                            <ExperienceCard image='/assets/images/aliens.png' place={yalePlace} title={yaleTitle} text={yaleBlurb} />
+                            <ExperienceCard image='/assets/images/aliens.png' place={airForcePlace} title={airForceTitle} text={airForceBlurb} />
+                            <ProficiencesCard />
+                        </div>
+                    </div>
+                </div>
+                <span className="hidden md:inline">
+                    <ScrollArrow handleSection={handleSection} location="experience" up={false} height={arrowHeight} width={arrowWidth} />
+                </span>
+            </section>
+            {/* <section id="experience" className="relative"> 
+                <div className="flex items-center justify-around h-[100vh] bg-[#FDF7F1]" style={{paddingTop: `${topPadding}px`}}>
 
                     <div className="w-[90%] h-full flex flex-row justify-around items-center">
 
@@ -77,7 +122,7 @@ export default function Experience({ handleSection, isSelected }: Props){
                                     Proficiences    
                                 </h2>
                                 <p className="font-inter text-xl mt-5">
-                                        I have years of experience in various languages and frameworks. In my spare time I making web games for game jams. Godot is my engine of choice!
+                                        Experienced in web development, Python, and low level programming. In my spare time I making web games for game jams. Godot is my engine of choice!
                                 </p>
                                 <div className="mt-5 flex flex-col">
                                     
@@ -98,8 +143,8 @@ export default function Experience({ handleSection, isSelected }: Props){
                         </div>
                     </div>
                 </div>
-                <ScrollArrow handleSection={handleSection} location="projects" up={false} />
-            </section>
+                <ScrollArrow handleSection={handleSection} location="projects" up={false} height={arrowHeight} width={arrowWidth} />
+            </section> */}
         </>
     )
 }

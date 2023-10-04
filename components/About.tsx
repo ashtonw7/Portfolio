@@ -1,15 +1,21 @@
 import { useEffect, useState } from "react";
-import { useIsVisible } from "@/app/scripts/isVisible";
+import useNavBarHeight from "@/app/hooks/useNavBarHeight";
+import useWindowDimensions from "@/app/hooks/useWindowDimensions";
 
 import Image from "next/image";
 import ScrollArrow from "./ScrollArrow";
 
 type Props = {
     handleSection: Function,
-    isSelected: Boolean
+    isSelected: Boolean,
+    height: number,
+    width: number,
+    topPadding: number,
+    arrowHeight: number,
+    arrowWidth: number,
 };
 
-export default function About({ handleSection, isSelected }: Props){
+export default function About({ handleSection, isSelected, height, width, topPadding, arrowHeight, arrowWidth }: Props){
     useEffect(() => {
         if (isSelected){
             let intro = document.getElementById("intro");
@@ -24,35 +30,49 @@ export default function About({ handleSection, isSelected }: Props){
             aboutDetails!.classList.add("animate-fade-up");
         }
     }, [isSelected]);
+
     
     return(
         <>
-            <section id="about" className="relative">
-                <div className="flex justify-center w-full"> 
-                    <div className="flex flex-row justify-between w-[70%] h-[100vh] bg-[#FDF7F1]">
-                        
-                        <div className="flex flex-col items-start w-[70%]">
-                            <div id="intro" className="font-bowlby text-[5rem] leading-[7rem] px-10 -skew-x-12 doodle-border animate-slide-in-right bg-white shadow-green mt-20">
+            <section id="about" className="relative h-[100dvh]">
+                <div className="flex justify-center">
+                    <div className="flex flex-col md:flex-row justify-start md:justify-center items-center md:items-start w-[80%] md:w-[70%] h-full pt-[60px]"> 
+                        {/* DESKTOP */}
+
+                        <div className="flex flex-col justify-start md:justify-between md:w-[70%] bg-[#FDF7F1]">
+                            
+                            <div id="intro" className="font-bowlby text-[1.7rem] md:text-[5rem] md:leading-[7rem] px-2 md:px-10 -skew-x-12 doodle-border animate-slide-in-right bg-white shadow-green-sm md:shadow-green mt-[3.5rem] md:mt-20">
                                 <h2 className="skew-x-12 ">Nice to meet you!</h2>
                             </div>
 
-                            <div id="aboutDetails" className="font-inter font-medium text-[2rem] mt-[5rem] animate-fade-up animate-delay-800">
-                                <p>
-                                    My name is Ashton Winters, and I'm a frontend developer.
-                                </p>
-                                <p className="mt-10">
-                                    When I'm not writing code, you can find me playing board games, working out, or writing at a coffee shop.  
-                                </p>
-                            </div>    
-                        </div>
+                            <div id="aboutDetails" className="font-inter font-medium text-[1.4rem] md:text-[2rem] mt-[3rem] md:mt-[5rem] animate-fade-up animate-delay-800">
+                                <div className="flex flex-row">
+                                    <div>
+                                        <p>
+                                            My name is Ashton Winters, and I'm a frontend developer.
+                                        </p>
+                                        <p className="mt-5 md:mt-10">
+                                            When I'm not writing code, you can find me playing board games, working out, or writing at a coffee shop.  
+                                        </p>
+                                    </div>
+                                    <Image className=" md:hidden" height={125} width={125} alt="Full body drawing" src='/assets/images/fullbody.png' />
+                                </div>
+                            </div>
 
-                        <div className="flex items-center">
-                            <Image className="" height={2905/3.5} width={890/3.5} alt="Full body drawing" src='/assets/images/fullbody.png' />
+                        </div>
+                        
+                        <div className="items-center hidden md:flex mt-20">
+                                <Image className="" height={250} width={250} alt="Full body drawing" src='/assets/images/fullbody.png' />
                         </div>
                     </div>
                 </div>
 
-                <ScrollArrow handleSection={handleSection} location="experience" up={false} />
+                <span className="md:hidden">    
+                    <ScrollArrow handleSection={handleSection} location="job1" up={false} height={arrowHeight} width={arrowWidth} />
+                </span>
+                <span className="hidden md:inline">
+                    <ScrollArrow handleSection={handleSection} location="experience" up={false} height={arrowHeight} width={arrowWidth} />
+                </span>
             </section>
         </>
     )

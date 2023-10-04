@@ -24,6 +24,20 @@ module.exports = {
       }
     },
     screens: {
+      'sm': '640px',
+      // => @media (min-width: 640px) { ... }
+
+      'md': '768px',
+      // => @media (min-width: 768px) { ... }
+
+      'lg': '1024px',
+      // => @media (min-width: 1024px) { ... }
+
+      'xl': '1280px',
+      // => @media (min-width: 1280px) { ... }
+
+      '2xl': '1536px',
+      // => @media (min-width: 1536px) { ... }
       'mid': '376px',
       'big': '681px',
       'break1': '860px',
@@ -38,7 +52,7 @@ module.exports = {
         '0%': { opacity: 0 },
         '25%': { opacity: 1 },
         '40%': { opacity: 1 },
-        '100%': { transform: 'translateY(65vh)', opacity: 0 },
+        '100%': { transform: 'translateY(65dvh)', opacity: 0 },
       },
       bounce: {
         '0%': { transform: 'translateY(-0%)' },

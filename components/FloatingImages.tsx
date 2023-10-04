@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { useState, useEffect } from "react";
+import useWindowDimensions from '@/app/hooks/useWindowDimensions';
 
 const ufo = '/assets/images/aliens.png';
 const barrel = '/assets/images/barrel.png';
@@ -12,10 +13,25 @@ const boots = '/assets/images/duels.png';
 const apple = '/assets/images/history-book.png';
 
 let imageLinks = [ufo, barrel, caveman, dolphin, dodo, jester, yeti, boots, apple];
+const delay = 500;
 
-const numImages = 9;
+type Props = {
+    height: number,
+    width: number
+};
 
-export default function FloatingImages(){
+export default function FloatingImages({ height, width }: Props){
+    let imageDims: number;
+    let numImages: number;
+
+    if (width > 1000){
+        imageDims = width / 11;
+        numImages = 9;
+    }
+    else{
+        imageDims = width/4;
+        numImages = 5
+    }
 
     let usedImages: any = [];
 
@@ -53,8 +69,8 @@ export default function FloatingImages(){
 
     let images: JSX.Element[] = [];
     
-    for (let i=0; i < 9; i++){
-        images.push(<Image id={i.toString()} key={i} onAnimationEnd={() => hideAndReset(i)} className="invisible" width="180" height="180" src={displayedImages[i]} alt="aliens" /> ) 
+    for (let i=0; i < numImages; i++){
+        images.push(<Image id={i.toString()} key={i} onAnimationEnd={() => hideAndReset(i)} className="invisible" width={imageDims} height={imageDims} src={displayedImages[i]} alt="aliens" /> ) 
     }
 
     useEffect(() => {
@@ -62,20 +78,22 @@ export default function FloatingImages(){
           if (!isAllVisible()){
             showNewImage()
           }
-        }, 800);
+        }, delay);
     
         return () => clearInterval(interval);
       }, []);
 
     function hideAndReset(i: number){
         let image = document.getElementById(i.toString());
-        image!.classList.remove("visible");
-        image!.classList.add("invisible");
-        resetImage(i);
+        if (image){
+            image!.classList.remove("visible");
+            image!.classList.add("invisible");
+            resetImage(i);
+        }
     }
 
     function isAllVisible(){
-        for (let i=0; i < 9; i++){
+        for (let i=0; i < numImages; i++){
             if (document.getElementById(i.toString())?.classList.contains("invisible")){
                 return false;
             }    
@@ -87,22 +105,22 @@ export default function FloatingImages(){
         let i = randImageInt();
 
         let image = document.getElementById(i.toString());
-
-        while (image!.classList.contains("visible")){
+        
+        while (image?.classList.contains("visible")){
             i = randImageInt();
             image = document.getElementById(i.toString());
         }
 
-        if (image!.classList.contains("invisible")){
-            image!.classList.remove("animate-cascade", "invisible");
-            image!.offsetHeight;
-            image!.classList.add("animate-cascade", "visible");
-        }
+        if (image?.classList.contains("invisible")){
+            image?.classList.remove("animate-cascade", "invisible");
+            image?.offsetHeight;
+            image?.classList.add("animate-cascade", "visible");
+        } 
     }
 
     return(
         <>
-            <div className='flex flex-row justify-center space-x-8 pt-10'>
+            <div className='flex flex-row justify-center space-x-8'>
 
                 { images }
 
