@@ -16,20 +16,7 @@ import exp from 'constants';
 export default function Home() {
   const { height, width } = useWindowDimensions();
   const navBarHeight = useNavBarHeight();
-  
-  const [topPadding, setTopPadding] = useState(navBarHeight);
   const [arrowDims, setArrowDims] = useState({height: 0, width: 0});
-
-  useEffect(() => {
-    if (width > 768){
-      setTopPadding(navBarHeight);
-      setArrowDims({height: 100, width: 100});
-    }
-    else{
-      setTopPadding(navBarHeight);
-      setArrowDims({height: 75, width: 75});
-    }
-  }, [navBarHeight]);
 
   const [currSection, setCurrSection] = useState("");
 
@@ -51,6 +38,24 @@ export default function Home() {
   const [projects, setProjects] = useState(false);
   const [contact, setContact] = useState(false);
 
+  const [modalVisible, setModalVisible] = useState(false);
+  
+  interface modalInfo {
+    title: string;
+    place: string;
+    text: [string];
+    image: string;
+  }
+
+  const [modalInfo, setShowModalInfo] = useState<modalInfo | null>();
+
+  function closeModal(){
+    setModalVisible(false);
+  }
+  function showModal(modalInfo: modalInfo){
+    setShowModalInfo(modalInfo);
+    setModalVisible(true);
+  }
 
   useEffect(() => {
     switch (currSection){
@@ -99,11 +104,13 @@ export default function Home() {
   return (
     <main>
       <NavBar handleSection={handleSection} />
-      <div id="wrapper" className="relative">
-        {/* <DetailsModal text={['asdf']} /> */}
-        <Heading handleSection={handleSection} isSelected={home} height={height} width={width} topPadding={topPadding} arrowHeight={arrowDims.height} arrowWidth={arrowDims.width} />
-        <About handleSection={handleSection} isSelected={about} height={height} width={width} topPadding={topPadding} arrowHeight={arrowDims.height} arrowWidth={arrowDims.width} />
-        <Experience handleSection={handleSection} isSelected={home} height={height} width={width} topPadding={topPadding} arrowHeight={arrowDims.height} arrowWidth={arrowDims.width} />
+      <div id="wrapper" className="relative overflow-x-clip">
+        {
+          modalVisible ? <DetailsModal closeModal={closeModal} text={modalInfo!.text} place={modalInfo!.place} title={modalInfo!.title} image={modalInfo!.image}  /> : ''
+        }
+        <Heading handleSection={handleSection} isSelected={home} />
+        <About handleSection={handleSection} isSelected={about} />
+        <Experience handleSection={handleSection} isSelected={home} showModal={showModal} />
         {/* <Projects handleSection={handleSection} isSelected={projects}/>
         <Contact handleSection={handleSection} isSelected={contact} /> */}
       </div>

@@ -15,7 +15,7 @@ export default function NavBar({ handleSection }: Props){
 
     return(
         <>
-            <nav id="navbar" className="flex flex-row justify-between px-[1rem] big:px-[10rem] text-md big:text-lg fixed top-0 w-full z-20 bg-[#FDF7F1] font-inter font-medium h-[5%]">
+            <nav id="navbar" className="flex flex-row w-full justify-between px-[1rem] bigphone:px-[3rem] lg:px-[10rem] text-sm iphone:text-md big:text-lg fixed top-0 z-20 bg-[#FDF7F1] font-inter font-medium h-[5%]">
                     <button onClick={() => scrollTo("home")}>
                         Home
                     </button>

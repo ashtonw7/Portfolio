@@ -8,14 +8,9 @@ import ScrollArrow from "./ScrollArrow";
 type Props = {
     handleSection: Function,
     isSelected: Boolean,
-    height: number,
-    width: number,
-    topPadding: number,
-    arrowHeight: number,
-    arrowWidth: number,
 };
 
-export default function About({ handleSection, isSelected, height, width, topPadding, arrowHeight, arrowWidth }: Props){
+export default function About({ handleSection, isSelected }: Props){
     // useEffect(() => {
     //     if (isSelected){
     //         let intro = document.getElementById("intro");
@@ -61,7 +56,7 @@ export default function About({ handleSection, isSelected, height, width, topPad
                             <img className="max-h-[80dvh] mx-[10rem]" src="/assets/images/fullbody.png" />
                         </div>
                     </div>
-                    <ScrollArrow handleSection={handleSection} location="experience" up={false} height={arrowHeight} width={arrowWidth} />
+                    <ScrollArrow handleSection={handleSection} location="experience" up={false} />
                 </div>
             </section>
         </>

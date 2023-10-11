@@ -15,22 +15,10 @@ const apple = '/assets/images/history-book.png';
 let imageLinks = [ufo, barrel, caveman, dolphin, dodo, jester, yeti, boots, apple];
 const delay = 500;
 
-type Props = {
-    height: number,
-    width: number
-};
-
-export default function FloatingImages({ height, width }: Props){
-    let imageDims: number;
-    let numImages: number;
-    if (width > 1000){
-        imageDims = width / 11;
-        numImages = 9;
-    }
-    else{
-        imageDims = width/4;
-        numImages = 5
-    }
+export default function FloatingImages(){
+    const { height, width } = useWindowDimensions();
+    
+    let numImages = 9;
 
     let usedImages: any = [];
 
@@ -69,7 +57,7 @@ export default function FloatingImages({ height, width }: Props){
     let images: JSX.Element[] = [];
     
     for (let i=0; i < numImages; i++){
-        images.push(<Image id={i.toString()} key={i} onAnimationEnd={() => hideAndReset(i)} className="invisible" width={imageDims} height={imageDims} src={displayedImages[i]} alt="aliens" /> ) 
+        images.push(<img id={i.toString()} key={i} onAnimationEnd={() => hideAndReset(i)} className="invisible h-[100px] bigphone:h-[150px] lg:h-[175px] w-auto" src={displayedImages[i]} alt="aliens" /> ) 
     }
 
     useEffect(() => {

@@ -8,11 +8,7 @@ import ProficiencesCard from "./ProficienciesCard";
 type Props = {
     handleSection: Function,
     isSelected: Boolean,
-    height: number,
-    width: number,
-    topPadding: number,
-    arrowHeight: number,
-    arrowWidth: number,
+    showModal: Function,
 };
 
 let text = 'Lorem ipsum dolor sit amet, consectetur a, tempor ipsum. Praesent in nibh lobortis, mollis lorem a, ultricies purus. Nulla sit amet pretium ligula. Nulla pulvinar euismod nisl, porta accumsan nibh condimentum at. In molestie lorem et purus elementum maximus.'
@@ -35,7 +31,7 @@ let airForceBlurb = [
     "I lead a team of 20 Airmen, ensuring their well-being and mission success."
 ]
 
-export default function Experience({ handleSection, isSelected, height, width, topPadding, arrowHeight, arrowWidth }: Props){
+export default function Experience({ handleSection, isSelected, showModal }: Props){
     useEffect(() => {
         console.log("EXPERIENCE", isSelected)
     }, [isSelected]);
@@ -43,19 +39,19 @@ export default function Experience({ handleSection, isSelected, height, width, t
     return(
         <>
             <section id="experience" className="flex justify-center items-end h-[100dvh]">
-                <div className="flex flex-col w-full expbreak35:w-[95%] expbreak5:w-[90%] h-[95%] justify-around items-center">
-                    <div className="flex flex-col w-[80%] expbreak32:w-auto expbreak32:flex-row mb-3 iphone:my-10 expbreak32:mb-0 flex-grow justify-between mt-2 expbreak4:mt-5">
+                <div className="flex flex-col w-[80%] expbreak35:w-[95%] expbreak5:w-[90%] h-[95%] justify-between items-center">
+                    <div className="flex flex-col h-full w-full expbreak32:w-auto expbreak32:flex-row my-0 aboutbreak3:my-10 expbreak32:mb-0 justify-around mt-0 expbreak4:mt-3">
                         <div>
-                            <ExperienceCard image='/assets/images/aliens.png' place={yalePlace} title={yaleTitle} shortTitle={yaleTitleShort} text={yaleBlurb} />
+                            <ExperienceCard image='/assets/images/aliens.png' place={yalePlace} title={yaleTitle} shortTitle={yaleTitleShort} text={yaleBlurb} showModal={showModal} />
                         </div>
                         <div> 
-                            <ExperienceCard image='/assets/images/aliens.png' place={airForcePlace} title={airForceTitle} shortTitle={shortAirForceTitle} text={airForceBlurb} />
+                            <ExperienceCard image='/assets/images/aliens.png' place={airForcePlace} title={airForceTitle} shortTitle={shortAirForceTitle} text={airForceBlurb} showModal={showModal} />
                         </div>
                         <div>    
                             <ProficiencesCard />
                         </div>
                     </div>
-                    <ScrollArrow handleSection={handleSection} location="experience" up={false} height={arrowHeight} width={arrowWidth} />
+                    <ScrollArrow handleSection={handleSection} location="experience" up={false} />
                 </div>
             </section>
                 

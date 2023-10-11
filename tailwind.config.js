@@ -38,6 +38,7 @@ module.exports = {
 
       '2xl': '1536px',
       // => @media (min-width: 1536px) { ... }
+      'lger': '1100px',
       'smallphone': '400px',
       'iphone': '390px',
       'bigphone': '450px',
@@ -45,7 +46,7 @@ module.exports = {
       'aboutbreak2': '770px',
       'aboutbreak3': '1030px',
       'aboutbreak4': '1760px',
-      'expbreak3': '1340px',
+      'expbreak3': '1770px',
       'expbreak32': '1401px',
       'expbreak35': '1470px',
       'expbreak4': '1650px',

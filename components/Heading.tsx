@@ -6,14 +6,9 @@ import useNavBarHeight from "@/app/hooks/useNavBarHeight";
 type Props = {
     handleSection: Function,
     isSelected: Boolean,
-    height: number,
-    width: number,
-    topPadding: number,
-    arrowHeight: number,
-    arrowWidth: number,
 };
 
-export default function Heading({ handleSection, isSelected, height, width, topPadding, arrowHeight, arrowWidth }: Props){
+export default function Heading({ handleSection, isSelected }: Props){
     useEffect(() => {
         if (isSelected){
             let name = document.getElementById("name");
@@ -33,7 +28,7 @@ export default function Heading({ handleSection, isSelected, height, width, topP
         <>
             <section id="home" className="relative h-[100dvh]">
                 <div className="absolute top-0 left-0 z-0 pt-[60px] w-full">
-                    <FloatingImages height={height} width={width} />
+                    <FloatingImages />
                 </div>
 
                 <div className="flex flex-col items-center justify-center h-full w-full bg-[#FDF7F1] z-10 pt-[60px]">
@@ -59,7 +54,7 @@ export default function Heading({ handleSection, isSelected, height, width, topP
                         </div>                    
                     </div>
 
-                    <ScrollArrow handleSection={handleSection} location="about" up={false} height={arrowHeight} width={arrowWidth} />
+                    <ScrollArrow handleSection={handleSection} location="about" up={false} />
                 </div>
             </section>
         </>
