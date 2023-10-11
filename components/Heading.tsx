@@ -32,16 +32,18 @@ export default function Heading({ handleSection, isSelected, height, width, topP
     return(
         <>
             <section id="home" className="relative h-[100dvh]">
-                <div className="flex flex-col items-center justify-between w-full bg-[#FDF7F1] pt-[60px]">
+                <div className="absolute top-0 left-0 z-0 pt-[60px] w-full">
                     <FloatingImages height={height} width={width} />
+                </div>
 
-                    <div id="introBlock" className="mb-[7rem] md:mb-0 bg-white doodle-border shadow-green-sm md:shadow-green z-10 w-[60%] px-[6rem] py-[1rem] md:py-[2rem]">
+                <div className="flex flex-col items-center justify-center h-full w-full bg-[#FDF7F1] z-10 pt-[60px]">
+                    <div id="introBlock" className="mt-auto mb-auto bg-white doodle-border shadow-green-sm md:shadow-green z-10 w-[60%] px-[6rem] py-[1rem] md:py-[2rem]">
                         <div className='flex flex-col items-center justify-center'>
-                            <h1 id="name" className="font-bowlby text-center text-[2rem] md:text-[4rem] lg:text-[6.5rem] leading-[2rem] md:leading-[3.5rem] lg:leading-[7rem] mb-7 animate-wiggle animate-once animate-ease-out">
+                            <h1 id="name" className="font-bowlby text-center text-[2rem] iphone:text-[3rem] md:text-[4rem] lg:text-[6.5rem] leading-[2rem] iphone:leading-[3rem] md:leading-[3.5rem] lg:leading-[7rem] mb-7 animate-wiggle animate-once animate-ease-out">
                                 Ashton Winters
                             </h1>
 
-                            <h2 id="headingDetails" className="flex flex-col md:flex-row justify-between font-inter font-medium text-center text-[1rem] md:text-[1.5rem] lg:text-[2rem] md:leading-[1.5rem] lg:leading-[2rem] animate-fade-up animate-delay-800 animate-ease-out">
+                            <h2 id="headingDetails" className="flex flex-col md:flex-row justify-between font-inter font-medium text-center text-[1rem] iphone:text-[1.3rem] md:text-[1.5rem] lg:text-[2rem] md:leading-[1.5rem] lg:leading-[2rem] animate-fade-up animate-delay-800 animate-ease-out">
                                 <span className="mb-5 md:mb-0">
                                     Frontend Developer
                                 </span>
@@ -56,8 +58,9 @@ export default function Heading({ handleSection, isSelected, height, width, topP
                             </h2>
                         </div>                    
                     </div>
+
+                    <ScrollArrow handleSection={handleSection} location="about" up={false} height={arrowHeight} width={arrowWidth} />
                 </div>
-                <ScrollArrow handleSection={handleSection} location="about" up={false} height={arrowHeight} width={arrowWidth} />
             </section>
         </>
     )

@@ -10,6 +10,7 @@ import About from '@/components/About';
 import Experience from '@/components/Experience';
 import Projects from '@/components/Projects';
 import Contact from '@/components/Contact';
+import DetailsModal from '@/components/DetailsModal';
 import exp from 'constants';
 
 export default function Home() {
@@ -98,7 +99,8 @@ export default function Home() {
   return (
     <main>
       <NavBar handleSection={handleSection} />
-      <div id="wrapper" className="relative overflow-x-hidden">
+      <div id="wrapper" className="relative">
+        {/* <DetailsModal text={['asdf']} /> */}
         <Heading handleSection={handleSection} isSelected={home} height={height} width={width} topPadding={topPadding} arrowHeight={arrowDims.height} arrowWidth={arrowDims.width} />
         <About handleSection={handleSection} isSelected={about} height={height} width={width} topPadding={topPadding} arrowHeight={arrowDims.height} arrowWidth={arrowDims.width} />
         <Experience handleSection={handleSection} isSelected={home} height={height} width={width} topPadding={topPadding} arrowHeight={arrowDims.height} arrowWidth={arrowDims.width} />

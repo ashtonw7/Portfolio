@@ -6,6 +6,10 @@ html {
   scroll-behavior: smooth;
 }
 
+/* div {
+  border:1px solid red;
+} */
+
 .doodle-border {
   border-width: 12px;
   --tw-border-opacity: 1;

@@ -23,7 +23,6 @@ type Props = {
 export default function FloatingImages({ height, width }: Props){
     let imageDims: number;
     let numImages: number;
-
     if (width > 1000){
         imageDims = width / 11;
         numImages = 9;

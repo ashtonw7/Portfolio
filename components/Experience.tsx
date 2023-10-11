@@ -19,6 +19,7 @@ let text = 'Lorem ipsum dolor sit amet, consectetur a, tempor ipsum. Praesent in
 
 let yalePlace = "Yale University"
 let yaleTitle = "B.S. Computer Science\nJapanese Language Certificate"
+let yaleTitleShort = 'B.S. Computer Science'
 let yaleBlurb = [
     "I graduated in 2020 from Yale University.",
     "Along with computer science, I also learned Japanese got the chance to study abroad there during the summers.",
@@ -27,6 +28,7 @@ let yaleBlurb = [
 
 let airForcePlace = "US Air Force"
 let airForceTitle = "AI Research Engineer\nDeputy Flight Commander"
+let shortAirForceTitle = "1st Lt\nAI Research Engineer"
 let airForceBlurb = [
     "I commissioned into the Air Force out of ROTC as a Defensive Cyber Operator. I am separating in January.",
     "As an AI Research Engineer, I test and develop visualization tools for cutting edge machine-learning tools.",
@@ -40,7 +42,25 @@ export default function Experience({ handleSection, isSelected, height, width, t
     
     return(
         <>
-            <section id="experience" className="relative">
+            <section id="experience" className="flex justify-center items-end h-[100dvh]">
+                <div className="flex flex-col w-full expbreak35:w-[95%] expbreak5:w-[90%] h-[95%] justify-around items-center">
+                    <div className="flex flex-col w-[80%] expbreak32:w-auto expbreak32:flex-row mb-3 iphone:my-10 expbreak32:mb-0 flex-grow justify-between mt-2 expbreak4:mt-5">
+                        <div>
+                            <ExperienceCard image='/assets/images/aliens.png' place={yalePlace} title={yaleTitle} shortTitle={yaleTitleShort} text={yaleBlurb} />
+                        </div>
+                        <div> 
+                            <ExperienceCard image='/assets/images/aliens.png' place={airForcePlace} title={airForceTitle} shortTitle={shortAirForceTitle} text={airForceBlurb} />
+                        </div>
+                        <div>    
+                            <ProficiencesCard />
+                        </div>
+                    </div>
+                    <ScrollArrow handleSection={handleSection} location="experience" up={false} height={arrowHeight} width={arrowWidth} />
+                </div>
+            </section>
+                
+            {/* <section id="experience" className="relative">
+                {/* Mobile 
                 <div className="md:hidden">
                     <div id="job1" className="flex flex-col items-center justify-center h-[100vh] pt-[60px]">
                         <div className="relative h-full">
@@ -66,6 +86,7 @@ export default function Experience({ handleSection, isSelected, height, width, t
                     </div>
                 </div>
 
+                {/* PC
                 <div className="hidden md:flex justify-center h-[100dvh]">
                     <div className="w-[90%] h-full flex pt-[60px]">
                         <div className="flex flex-row mt-10 justify-between">
@@ -78,7 +99,7 @@ export default function Experience({ handleSection, isSelected, height, width, t
                 <span className="hidden md:inline">
                     <ScrollArrow handleSection={handleSection} location="experience" up={false} height={arrowHeight} width={arrowWidth} />
                 </span>
-            </section>
+            </section> */}
             {/* <section id="experience" className="relative"> 
                 <div className="flex items-center justify-around h-[100vh] bg-[#FDF7F1]" style={{paddingTop: `${topPadding}px`}}>
 

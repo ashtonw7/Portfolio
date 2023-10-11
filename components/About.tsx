@@ -16,63 +16,53 @@ type Props = {
 };
 
 export default function About({ handleSection, isSelected, height, width, topPadding, arrowHeight, arrowWidth }: Props){
-    useEffect(() => {
-        if (isSelected){
-            let intro = document.getElementById("intro");
-            let aboutDetails = document.getElementById("aboutDetails");
+    // useEffect(() => {
+    //     if (isSelected){
+    //         let intro = document.getElementById("intro");
+    //         let aboutDetails = document.getElementById("aboutDetails");
 
-            intro!.classList.remove("animate-slide-in-right");
-            intro!.offsetHeight;
-            intro!.classList.add("animate-slide-in-right");
+    //         intro!.classList.remove("animate-slide-in-right");
+    //         intro!.offsetHeight;
+    //         intro!.classList.add("animate-slide-in-right");
 
-            aboutDetails!.classList.remove("animate-fade-up");
-            aboutDetails!.offsetHeight;
-            aboutDetails!.classList.add("animate-fade-up");
-        }
-    }, [isSelected]);
+    //         aboutDetails!.classList.remove("animate-fade-up");
+    //         aboutDetails!.offsetHeight;
+    //         aboutDetails!.classList.add("animate-fade-up");
+    //     }
+    // }, [isSelected]);
 
     
     return(
         <>
-            <section id="about" className="relative h-[100dvh]">
-                <div className="flex justify-center">
-                    <div className="flex flex-col md:flex-row justify-start md:justify-center items-center md:items-start w-[80%] md:w-[70%] h-full pt-[60px]"> 
-                        {/* DESKTOP */}
-
-                        <div className="flex flex-col justify-start md:justify-between md:w-[70%] bg-[#FDF7F1]">
-                            
-                            <div id="intro" className="font-bowlby text-[1.7rem] md:text-[5rem] md:leading-[7rem] px-2 md:px-10 -skew-x-12 doodle-border animate-slide-in-right bg-white shadow-green-sm md:shadow-green mt-[3.5rem] md:mt-20">
-                                <h2 className="skew-x-12 ">Nice to meet you!</h2>
-                            </div>
-
-                            <div id="aboutDetails" className="font-inter font-medium text-[1.4rem] md:text-[2rem] mt-[3rem] md:mt-[5rem] animate-fade-up animate-delay-800">
-                                <div className="flex flex-row">
-                                    <div>
-                                        <p>
-                                            My name is Ashton Winters, and I'm a frontend developer.
-                                        </p>
-                                        <p className="mt-5 md:mt-10">
-                                            When I'm not writing code, you can find me playing board games, working out, or writing at a coffee shop.  
-                                        </p>
-                                    </div>
-                                    <Image className=" md:hidden" height={125} width={125} alt="Full body drawing" src='/assets/images/fullbody.png' />
-                                </div>
-                            </div>
-
-                        </div>
+            <section id="about" className="flex justify-center items-end h-[100dvh]">
+                <div className="flex flex-col w-[80%] aboutbreak4:w-[70%] h-[95%] justify-between items-center">
+                    <div className="flex flex-col aboutbreak3:flex-row flex-grow justify-center">            
                         
-                        <div className="items-center hidden md:flex mt-20">
-                                <Image className="" height={250} width={250} alt="Full body drawing" src='/assets/images/fullbody.png' />
+                        <div className="flex flex-col">
+                            <div className="flex justify-center bg-white aboutbreak3:mr-auto mb-5 aboutbreak2:mb-10 md:mb-0 doodle-border shadow-green-sm aboutbreak3:shadow-green -skew-x-12 animate-slide-in-right">
+                                <h2 className="font-bowlby md:text-left text-[1.5rem] iphone:text-[1.8rem] aboutbreak2:text-[2.3rem] aboutbreak4:text-[2.8rem] md:text-[3rem] aboutbreak:px-[1.5rem]">
+                                    Nice to meet you!
+                                </h2>
+                            </div>
+
+                            <div className="flex flex-row">
+                                <div className="font-inter font-medium text-[1.3rem] bigphone:text-[1.6rem] aboutbreak3:text-[2.2rem] aboutbreak4:text-[2.7rem] animate-fade-up">
+                                    <p>
+                                        My name is Ashton Winters, and I'm a frontend developer.
+                                    </p>
+                                    <p className="mt-5 md:mt-10">
+                                        When I'm not writing code, you can find me playing board games, working out, or writing at a coffee shop.  
+                                    </p>
+                                </div>
+                                <img className="flex aboutbreak3:hidden max-h-[55dvh] bigphone:max-h-[60dvh]" src="/assets/images/fullbody.png" />
+                            </div>
+                        </div>
+                        <div className="hidden aboutbreak3:flex justify-center items-center">
+                            <img className="max-h-[80dvh] mx-[10rem]" src="/assets/images/fullbody.png" />
                         </div>
                     </div>
-                </div>
-
-                <span className="md:hidden">    
-                    <ScrollArrow handleSection={handleSection} location="job1" up={false} height={arrowHeight} width={arrowWidth} />
-                </span>
-                <span className="hidden md:inline">
                     <ScrollArrow handleSection={handleSection} location="experience" up={false} height={arrowHeight} width={arrowWidth} />
-                </span>
+                </div>
             </section>
         </>
     )
