@@ -30,7 +30,7 @@ export default function DetailsModal({ closeModal, place, title, text, image }: 
     
     return(
         <>
-            <div className="fixed top-0 left-0 h-full w-full bg-black z-20 opacity-20" />
+            <div className="fixed top-0 left-0 h-[100svh]] w-full bg-black z-20 opacity-20" />
             <section id="modal" className="fixed top-0 left-0 w-full h-[100svh] z-20 animate-duration-[500ms]">
                 <div className="flex justify-center items-center h-full w-full">
                     <div className="flex flex-col justify-center items-center h-[99%] w-[99%] border-black border-[10px] bg-white rounded-sm px-3">
