@@ -13,7 +13,7 @@ export default function DetailsModal({ closeModal, place, title, text, image }: 
 
     for (let i = 0; i < text.length; i++){
         blurb.push(
-            <p className="leading-5">
+            <p className="leading-5" key={i}>
                 {text[i]}
             </p>
         );
@@ -29,7 +29,7 @@ export default function DetailsModal({ closeModal, place, title, text, image }: 
                             <h2 className="font-bowlby text-3xl mt-[3rem]">
                                 {place}
                             </h2>
-                            <img className='max-w-[150px] shadow-green-sm border-[5px] my-5 border-black rounded-[500px]' src={image} />
+                            <img className='max-w-[150px] shadow-green-sm border-[5px] my-5 p-3 border-black rounded-[500px]' src={image} />
                             <h3 className="font-inter font-medium text-center text-xl whitespace-pre-wrap mb-5 leading-5">
                                 {title}
                             </h3>
@@ -39,8 +39,8 @@ export default function DetailsModal({ closeModal, place, title, text, image }: 
                             </div>
                         </div>
                         <div className="flex min-h-[10%] items-center">
-                            <button className="rounded-sm font-inter font-bold text-white bg-[#00917B] px-4 py-2" onClick={() => closeModal()}>
-                                Close
+                            <button className="rounded-md font-inter font-bold text-white bg-[#00917B] px-4 py-2" onClick={() => closeModal()}>
+                                CLOSE
                             </button>
                         </div> 
                     </div>

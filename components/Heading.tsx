@@ -31,10 +31,10 @@ export default function Heading({ handleSection, isSelected }: Props){
                     <FloatingImages />
                 </div>
 
-                <div className="flex flex-col items-center justify-center h-full w-full bg-[#FDF7F1] z-10 pt-[60px]">
+                <div className="flex flex-col items-center justify-center h-full w-full z-10 pt-[60px]">
                     <div id="introBlock" className="mt-auto mb-auto bg-white doodle-border shadow-green-sm md:shadow-green z-10 w-[60%] px-[6rem] py-[1rem] md:py-[2rem]">
                         <div className='flex flex-col items-center justify-center'>
-                            <h1 id="name" className="font-bowlby text-center text-[2rem] iphone:text-[3rem] md:text-[4rem] lg:text-[6.5rem] leading-[2rem] iphone:leading-[3rem] md:leading-[3.5rem] lg:leading-[7rem] mb-7 animate-wiggle animate-once animate-ease-out">
+                            <h1 id="name" className="font-bowlby text-center text-[2rem] iphone:text-[2.5rem] md:text-[4rem] lg:text-[6.5rem] leading-[2rem] iphone:leading-[3rem] md:leading-[3.5rem] lg:leading-[7rem] mb-7 animate-wiggle animate-once animate-ease-out">
                                 Ashton Winters
                             </h1>
 

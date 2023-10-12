@@ -111,8 +111,8 @@ export default function Home() {
         <Heading handleSection={handleSection} isSelected={home} />
         <About handleSection={handleSection} isSelected={about} />
         <Experience handleSection={handleSection} isSelected={home} showModal={showModal} />
-        {/* <Projects handleSection={handleSection} isSelected={projects}/>
-        <Contact handleSection={handleSection} isSelected={contact} /> */}
+        <Projects handleSection={handleSection} isSelected={projects}/>
+        <Contact handleSection={handleSection} isSelected={contact} />
       </div>
     </main>
   )

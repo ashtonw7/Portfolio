@@ -15,17 +15,14 @@ export default function NavBar({ handleSection }: Props){
 
     return(
         <>
-            <nav id="navbar" className="flex flex-row w-full justify-between px-[1rem] bigphone:px-[3rem] lg:px-[10rem] text-sm iphone:text-md big:text-lg fixed top-0 z-20 bg-[#FDF7F1] font-inter font-medium h-[5%]">
+            <nav id="navbar" className="flex flex-row w-full justify-between px-[1rem] bigphone:px-[3rem] lg:px-[10rem] text-sm iphone:text-md big:text-lg fixed top-0 z-20 bg-[#fff5d8] font-inter font-medium h-[5%]">
                     <button onClick={() => scrollTo("home")}>
                         Home
                     </button>
                     <button onClick={() => scrollTo("about")}>
                         About
                     </button>
-                    <button className="hidden md:inline" onClick={() => scrollTo("experience")}>
-                        Experience
-                    </button>
-                    <button className="md:hidden" onClick={() => scrollTo("job1")}>
+                    <button onClick={() => scrollTo("experience")}>
                         Experience
                     </button>
                     <button onClick={() => scrollTo("projects")}>

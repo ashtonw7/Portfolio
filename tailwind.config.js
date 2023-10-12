@@ -40,6 +40,7 @@ module.exports = {
       // => @media (min-width: 1536px) { ... }
       'lger': '1100px',
       'smallphone': '400px',
+      'smallish': '548px',
       'iphone': '390px',
       'bigphone': '450px',
       'aboutbreak': '500px',

@@ -34,7 +34,7 @@ export default function About({ handleSection, isSelected }: Props){
                     <div className="flex flex-col aboutbreak3:flex-row flex-grow justify-center">            
                         
                         <div className="flex flex-col">
-                            <div className="flex justify-center bg-white aboutbreak3:mr-auto mb-5 aboutbreak2:mb-10 md:mb-0 doodle-border shadow-green-sm aboutbreak3:shadow-green -skew-x-12 animate-slide-in-right">
+                            <div className="flex justify-center bg-white aboutbreak3:mr-auto mb-5 aboutbreak3:mt-[2rem] aboutbreak2:mb-10 md:mb-0 doodle-border shadow-green-sm aboutbreak3:shadow-green -skew-x-12 animate-slide-in-right">
                                 <h2 className="font-bowlby md:text-left text-[1.5rem] iphone:text-[1.8rem] aboutbreak2:text-[2.3rem] aboutbreak4:text-[2.8rem] md:text-[3rem] aboutbreak:px-[1.5rem]">
                                     Nice to meet you!
                                 </h2>

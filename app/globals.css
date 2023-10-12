@@ -2,13 +2,14 @@ html {
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
-  background-color: #FAF9F6;
+  background-color: #fff5d8;
+  /* background-color: bg-[#FDF7F1] */
   scroll-behavior: smooth;
 }
 
-div {
+/* div {
   border:1px solid red;
-}
+} */
 
 .doodle-border {
   border-width: 12px;
