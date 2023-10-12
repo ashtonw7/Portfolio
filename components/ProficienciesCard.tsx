@@ -65,7 +65,7 @@ export default function ProficiencesCard(){
                             Proficiences    
                         </h2>
                         <p className="text-lg lg:text-xl font-inter font-semi whitespace-pre-wrap mt-3 lg:px-0 lg:py-0">
-                            Experienced in web development, Python, and low level programming. In my spare time, I making web games for game jams.
+                            Experienced in web development, Python, and low level programming. In my spare time, I making web games for game jams. Check out my itch.io page and waste a few minutes playing some!
                         </p>
                         <div className="flex flex-col lg:hidden">
                             <div className="flex flex-wrap mt-5 justify-between">
