@@ -6,7 +6,7 @@ export default function ProficiencesCard(){
             <div className="flex flex-col justify-start expbreak32:justify-center doodle-border h-full shadow-green-sm lg:px-6 expbreak3:px-8 smallphone:py-2 expbreak32:py-0 bg-white">
                 <div className="min-h-[80%]">
                     <div className="flex flex-col">
-                        <h2 className="flex text-xl bigphone:text-2xl lg:text-3xl font-bowlby font-extrabold justify-center lg:justify-left">
+                        <h2 className="hidden lg:flex text-xl bigphone:text-2xl lg:text-3xl font-bowlby font-extrabold justify-center lg:justify-left">
                             Links    
                         </h2>
                         <div className="flex justify-between flex-col bigphone:flex-row bigphone:mt-3 md:mt-0 expbreak32:flex-col">

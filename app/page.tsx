@@ -43,6 +43,15 @@ export default function Home() {
   }
 
   useEffect(() => {
+    if (modalVisible){
+      let modal = document.getElementById("modal");
+      modal!.classList.remove("animate-fade");
+      modal!.offsetHeight;
+      modal!.classList.add("animate-fade");
+    }
+  }, [modalVisible]);
+
+  useEffect(() => {
     switch (currSection){
       case "home":
         setHome(true);

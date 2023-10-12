@@ -38,7 +38,7 @@ export default function Experience({ handleSection, isSelected }: Props){
                                 Fat Puppet
                             </h2>
                         </div>
-                        <div className="flex flex-col xl:flex-row justify-center items-center space-y-10 sm:mt-[0.5rem] xl:mt-[3rem] expbreak32:mb-[3rem]">
+                        <div className="flex flex-col xl:flex-row justify-center items-center space-y-3 expbreak32:space-y-10 sm:mt-[0.5rem] xl:mt-[3rem] expbreak32:mb-[3rem]">
                             <div id="details" className="font-inter font-medium text-[1rem] smallphone:text-[1.2rem] iphone:text-[1.3rem] bigphone:text-[1.5rem] xl:text-[2.2rem] aboutbreak4:text-[2.7rem] animate-fade-up animate-duration-700 animate-delay-[500ms]">
                                 <p>
                                     Blogging platform developed using Next.js and Tailwind.
@@ -52,7 +52,7 @@ export default function Experience({ handleSection, isSelected }: Props){
                                 </p>
                             </div>
                             <div id="image" className="animate-jump-in animate-duration-[600ms] animate-delay-[900ms] animate-ease-in-out">
-                                <img className="max-w-[40dvh] expbreak32:max-w-[50dvh] h-auto mr-3" src="/assets/images/fatpuppet.png" />
+                                <img className="max-w-[30dvh] expbreak32:max-w-[50dvh] h-auto mr-3" src="/assets/images/fatpuppet.png" />
                             </div>
                         </div>
                     </div>

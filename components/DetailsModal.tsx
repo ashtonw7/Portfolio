@@ -31,14 +31,16 @@ export default function DetailsModal({ closeModal, place, title, text, image }: 
     return(
         <>
             <div className="fixed top-0 left-0 h-full w-full bg-black z-20 opacity-20" />
-            <section id="detailModal" className="fixed top-0 left-0 w-full h-full z-20">
+            <section id="modal" className="fixed top-0 left-0 w-full h-full z-20 animate-duration-[500ms]">
                 <div className="flex justify-center items-center h-full w-full">
-                    <div className="flex flex-col justify-center items-center w-[90%] md:w-[85%] h-[90%] border-black border-[10px] bg-white rounded-sm px-3">
+                    <div className="flex flex-col justify-center items-center h-[99%] w-[99%] border-black border-[10px] bg-white rounded-sm px-3">
                         <div className="flex flex-col justify-start items-center md:w-[70%]">
                             <h2 className="flex justify-center text-center w-full font-bowlby text-2xl iphone:text-3xl md:text-6xl">
                                 {place}
                             </h2>
-                            <img className='max-w-[150px] shadow-green-sm border-[5px] my-2 iphone:my-5 p-3 border-black rounded-[500px]' src={image} />
+                            <div className="flex items-center justify-center my-2 shadow-green-sm border-[5px] border-black rounded-[500px]">
+                                <img className='max-w-[150px] pt-3 pb-1 px-3' src={image} />
+                            </div>
                             <h3 className="font-inter font-medium text-center text-xl md:text-2xl whitespace-pre-wrap mb-2 iphone:mb-5 leading-5">
                                 {title}
                             </h3>
