@@ -25,7 +25,7 @@ export default function Contact({ handleSection, isSelected }: Props){
 
     return(
         <>
-            <section id="contact" className="flex justify-center items-end w-full h-[100dvh]">
+            <section id="contact" className="flex justify-center items-end w-full h-[100svh]">
                 <div className="flex flex-col max-w-[80%] h-[95%] justify-start items-center">
                     <div className="flex flex-col w-full h-full items-center justify-center mb-[10rem]">
                         <div id="connect" className="flex flex-col w-full bg-white aboutbreak3:mt-[2rem] doodle-border shadow-green-sm aboutbreak3:shadow-green -skew-x-12 animate-slide-in-right">

@@ -26,7 +26,7 @@ export default function About({ handleSection, isSelected }: Props){
     
     return(
         <>
-            <section id="about" className="flex justify-center items-end h-[100dvh]">
+            <section id="about" className="flex justify-center items-end h-[100svh]">
                 <div className="flex flex-col w-[80%] aboutbreak4:w-[70%] h-[95%] justify-between items-center">
                     <div className="flex flex-col aboutbreak3:flex-row flex-grow justify-center">            
                         
@@ -46,11 +46,11 @@ export default function About({ handleSection, isSelected }: Props){
                                         {"When I'm not writing code, you can find me playing board games, working out, or writing at a coffee shop."}  
                                     </p>
                                 </div>
-                                <img className="flex aboutbreak3:hidden max-h-[55dvh] bigphone:max-h-[60dvh]" src="/assets/images/fullbody.png" />
+                                <img className="flex aboutbreak3:hidden max-h-[55svh] bigphone:max-h-[60svh]" src="/assets/images/fullbody.png" />
                             </div>
                         </div>
                         <div className="hidden aboutbreak3:flex justify-center items-center">
-                            <img className="max-h-[80dvh] mx-[10rem]" src="/assets/images/fullbody.png" />
+                            <img className="max-h-[80svh] mx-[10rem]" src="/assets/images/fullbody.png" />
                         </div>
                     </div>
                     <ScrollArrow handleSection={handleSection} location="experience" up={false} />

@@ -25,7 +25,7 @@ export default function Heading({ handleSection, isSelected }: Props){
     
     return(
         <>
-            <section id="home" className="relative h-[100dvh]">
+            <section id="home" className="relative h-[100svh]">
                 <div className="absolute top-0 left-0 z-0 pt-[60px] w-full">
                     <FloatingImages />
                 </div>

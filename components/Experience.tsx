@@ -54,7 +54,7 @@ export default function Experience({ handleSection, isSelected, showModal }: Pro
     
     return(
         <>
-            <section id="experience" className="flex justify-center items-end h-[100dvh]">
+            <section id="experience" className="flex justify-center items-end h-[100svh]">
                 <div className="flex flex-col w-[80%] lg:w-[90%] h-[95%] justify-start items-center">
                     <div className="flex flex-col expbreak32:flex-row h-full w-full expbreak32:w-auto  my-0 xler:my-10 expbreak32:mb-0 justify-around mt-0 expbreak4:mt-3">
                         <div id="firstJob" className="animate-fade-up animate-duration-[1000ms] animate-ease-in-out animate-delay-100">

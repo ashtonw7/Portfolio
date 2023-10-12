@@ -30,7 +30,7 @@ export default function Experience({ handleSection, isSelected }: Props){
     
     return(
         <>
-            <section id="projects" className="flex justify-center items-end w-full h-[100dvh]">
+            <section id="projects" className="flex justify-center items-end w-full h-[100svh]">
                 <div className="flex flex-col w-[80%] aboutbreak4:w-[70%] h-[95%] justify-between items-center">
                     <div className="flex flex-col h-full w-full expbreak32:w-auto justify-start">
                         <div id="projectTitle" className="flex justify-center bg-white aboutbreak3:mr-auto mb-5 aboutbreak3:mt-[2rem] aboutbreak2:mb-10 md:mb-0 doodle-border shadow-green-sm aboutbreak3:shadow-green -skew-x-12 animate-slide-in-right">
@@ -52,7 +52,7 @@ export default function Experience({ handleSection, isSelected }: Props){
                                 </p>
                             </div>
                             <div id="image" className="animate-jump-in animate-duration-[600ms] animate-delay-[900ms] animate-ease-in-out">
-                                <img className="max-w-[30dvh] expbreak32:max-w-[50dvh] h-auto mr-3" src="/assets/images/fatpuppet.png" />
+                                <img className="max-w-[30svh] expbreak32:max-w-[50svh] h-auto mr-3" src="/assets/images/fatpuppet.png" />
                             </div>
                         </div>
                     </div>
