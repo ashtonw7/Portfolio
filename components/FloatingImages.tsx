@@ -1,6 +1,4 @@
-import Image from 'next/image';
-import { useState, useEffect } from "react";
-import useWindowDimensions from '@/app/hooks/useWindowDimensions';
+import { useEffect } from "react";
 
 const ufo = '/assets/images/aliens.png';
 const barrel = '/assets/images/barrel.png';
@@ -15,9 +13,7 @@ const apple = '/assets/images/history-book.png';
 let imageLinks = [ufo, barrel, caveman, dolphin, dodo, jester, yeti, boots, apple];
 const delay = 500;
 
-export default function FloatingImages(){
-    const { height, width } = useWindowDimensions();
-    
+export default function FloatingImages(){    
     let numImages = 9;
 
     let usedImages: any = [];

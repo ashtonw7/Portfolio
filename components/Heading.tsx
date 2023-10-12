@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef, use } from "react";
 import FloatingImages from "./FloatingImages";
 import ScrollArrow from "./ScrollArrow";
-import useNavBarHeight from "@/app/hooks/useNavBarHeight";
 
 type Props = {
     handleSection: Function,
@@ -38,7 +37,7 @@ export default function Heading({ handleSection, isSelected }: Props){
                                 Ashton Winters
                             </h1>
 
-                            <h2 id="headingDetails" className="flex flex-col md:flex-row justify-between font-inter font-medium text-center text-[1rem] iphone:text-[1.3rem] md:text-[1.5rem] lg:text-[2rem] md:leading-[1.5rem] lg:leading-[2rem] animate-fade-up animate-delay-800 animate-ease-out">
+                            <h2 id="headingDetails" className="flex flex-col md:flex-row justify-between font-inter font-medium text-center text-[1rem] iphone:text-[1.3rem] md:text-[1.5rem] lg:text-[2rem] md:leading-[1.5rem] lg:leading-[2rem] animate-fade-up animate-duration-700 animate-delay-[500ms]">
                                 <span className="mb-5 md:mb-0">
                                     Frontend Developer
                                 </span>

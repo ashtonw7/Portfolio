@@ -39,6 +39,7 @@ module.exports = {
       '2xl': '1536px',
       // => @media (min-width: 1536px) { ... }
       'lger': '1100px',
+      'xler': '1290px',
       'smallphone': '400px',
       'smallish': '548px',
       'iphone': '390px',

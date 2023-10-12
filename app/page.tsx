@@ -1,8 +1,6 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import useWindowDimensions from './hooks/useWindowDimensions';
-import useNavBarHeight from './hooks/useNavBarHeight';
 
 import NavBar from '@/components/NavBar';
 import Heading from '@/components/Heading';
@@ -11,25 +9,12 @@ import Experience from '@/components/Experience';
 import Projects from '@/components/Projects';
 import Contact from '@/components/Contact';
 import DetailsModal from '@/components/DetailsModal';
-import exp from 'constants';
 
 export default function Home() {
-  const { height, width } = useWindowDimensions();
-  const navBarHeight = useNavBarHeight();
-  const [arrowDims, setArrowDims] = useState({height: 0, width: 0});
-
   const [currSection, setCurrSection] = useState("");
 
   function handleSection(section: string) {
     setCurrSection(section);
-  }
-
-  let indices = {
-    HOME: 0,
-    ABOUT: 1,
-    EXPERIENCE: 2,
-    PROJECTS: 3,
-    CONTACT: 4
   }
 
   const [home, setHome] = useState(false);
@@ -110,7 +95,7 @@ export default function Home() {
         }
         <Heading handleSection={handleSection} isSelected={home} />
         <About handleSection={handleSection} isSelected={about} />
-        <Experience handleSection={handleSection} isSelected={home} showModal={showModal} />
+        <Experience handleSection={handleSection} isSelected={experience} showModal={showModal} />
         <Projects handleSection={handleSection} isSelected={projects}/>
         <Contact handleSection={handleSection} isSelected={contact} />
       </div>

@@ -1,8 +1,5 @@
 import { useEffect, useState } from "react";
-import useNavBarHeight from "@/app/hooks/useNavBarHeight";
-import useWindowDimensions from "@/app/hooks/useWindowDimensions";
 
-import Image from "next/image";
 import ScrollArrow from "./ScrollArrow";
 
 type Props = {
@@ -11,20 +8,20 @@ type Props = {
 };
 
 export default function About({ handleSection, isSelected }: Props){
-    // useEffect(() => {
-    //     if (isSelected){
-    //         let intro = document.getElementById("intro");
-    //         let aboutDetails = document.getElementById("aboutDetails");
+    useEffect(() => {
+        if (isSelected){
+            let intro = document.getElementById("intro");
+            let aboutDetails = document.getElementById("aboutDetails");
 
-    //         intro!.classList.remove("animate-slide-in-right");
-    //         intro!.offsetHeight;
-    //         intro!.classList.add("animate-slide-in-right");
+            intro!.classList.remove("animate-slide-in-right");
+            intro!.offsetHeight;
+            intro!.classList.add("animate-slide-in-right");
 
-    //         aboutDetails!.classList.remove("animate-fade-up");
-    //         aboutDetails!.offsetHeight;
-    //         aboutDetails!.classList.add("animate-fade-up");
-    //     }
-    // }, [isSelected]);
+            aboutDetails!.classList.remove("animate-fade-up");
+            aboutDetails!.offsetHeight;
+            aboutDetails!.classList.add("animate-fade-up");
+        }
+    }, [isSelected]);
 
     
     return(
@@ -34,14 +31,14 @@ export default function About({ handleSection, isSelected }: Props){
                     <div className="flex flex-col aboutbreak3:flex-row flex-grow justify-center">            
                         
                         <div className="flex flex-col">
-                            <div className="flex justify-center bg-white aboutbreak3:mr-auto mb-5 aboutbreak3:mt-[2rem] aboutbreak2:mb-10 md:mb-0 doodle-border shadow-green-sm aboutbreak3:shadow-green -skew-x-12 animate-slide-in-right">
+                            <div id="intro" className="flex justify-center bg-white aboutbreak3:mr-auto mb-5 aboutbreak3:mt-[2rem] aboutbreak2:mb-10 md:mb-0 doodle-border shadow-green-sm aboutbreak3:shadow-green -skew-x-12 animate-slide-in-right">
                                 <h2 className="font-bowlby md:text-left text-[1.5rem] iphone:text-[1.8rem] aboutbreak2:text-[2.3rem] aboutbreak4:text-[2.8rem] md:text-[3rem] aboutbreak:px-[1.5rem]">
                                     Nice to meet you!
                                 </h2>
                             </div>
 
                             <div className="flex flex-row">
-                                <div className="font-inter font-medium text-[1.3rem] bigphone:text-[1.6rem] aboutbreak3:text-[2.2rem] aboutbreak4:text-[2.7rem] animate-fade-up">
+                                <div id="aboutDetails" className="font-inter font-medium text-[1.3rem] bigphone:text-[1.6rem] aboutbreak3:text-[2.2rem] aboutbreak4:text-[2.7rem] animate-fade-up animate-duration-700 animate-delay-[500ms]">
                                     <p>
                                         My name is Ashton Winters, and I'm a frontend developer.
                                     </p>
