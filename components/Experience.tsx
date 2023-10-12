@@ -17,15 +17,15 @@ let yaleTitle = "B.S. Computer Science\nJapanese Certificate"
 let yaleTitleShort = 'B.S. Computer Science'
 let yaleBlurb = [
     "I graduated in 2020 from Yale University.",
-    "Along with computer science, I also learned Japanese got the chance to study abroad there during the summers.",
-    "For my senior project, I combined my two interests to build online learning tools for the Japanese Department."
+    "Along with computer science, I also learned Japanese and got the chance to study abroad there during the summers.",
+    "I combined my two interests to build online learning tools for the Japanese Department."
 ]
 
 let airForcePlace = "US Air Force"
 let airForceTitle = "AI Research Engineer\nDeputy Flight Commander"
 let shortAirForceTitle = "1st Lt\nAI Research Engineer"
 let airForceBlurb = [
-    "I commissioned into the Air Force out of ROTC as a Defensive Cyber Operator. I am separating in January.",
+    "I commissioned out of ROTC as a Defensive Cyber Operator. I am currently transitioning out of the military.",
     "As an AI Research Engineer, I test and develop visualization tools for cutting edge machine-learning tools.",
     "I lead a team of 20 Airmen, ensuring their well-being and mission success."
 ]

@@ -40,7 +40,7 @@ export default function About({ handleSection, isSelected }: Props){
                             <div className="flex flex-row">
                                 <div id="aboutDetails" className="font-inter font-medium text-[1.3rem] bigphone:text-[1.6rem] aboutbreak3:text-[2.2rem] aboutbreak4:text-[2.7rem] animate-fade-up animate-duration-700 animate-delay-[500ms]">
                                     <p>
-                                        {"My name is Ashton Winters, and I'm a frontend developer."}
+                                        {"My name is Ashton Winters, and I love all things tech."}
                                     </p>
                                     <p className="mt-5 md:mt-10">
                                         {"When I'm not writing code, you can find me playing board games, working out, or writing at a coffee shop."}  
