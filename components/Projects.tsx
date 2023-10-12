@@ -40,13 +40,13 @@ export default function Experience({ handleSection, isSelected }: Props){
                         </div>
                         <div className="flex flex-col xl:flex-row justify-center items-center space-y-3 expbreak32:space-y-10 sm:mt-[0.5rem] xl:mt-[3rem] expbreak32:mb-[3rem]">
                             <div id="details" className="font-inter font-medium text-[0.7rem] smallphone:text-[1.2rem] iphone:text-[1.3rem] bigphone:text-[1.5rem] xl:text-[2.2rem] aboutbreak4:text-[2.7rem] animate-fade-up animate-duration-700 animate-delay-[500ms]">
-                                <p>
-                                    Fat Puppet is a blogging website developed using Next.js and Tailwind.
+                                <p className="leading-snug smallphone:leading-normal">
+                                    Custom website developed using Next.js and Tailwind.
                                 </p>
-                                <p className="mt-2 md:mt-10">    
+                                <p className="mt-2 md:mt-10 leading-snug smallphone:leading-normal">    
                                     It has automated page creation for new posts, satistifies accesibility requirements, and is fully responsive.   
                                 </p>
-                                <p className="mt-2 md:mt-10">
+                                <p className="mt-2 md:mt-10 leading-snug smallphone:leading-normal">
                                     This is also where I regularly post humor pieces.   
                                     Feel free to <a target="_blank" className="mt-2 md:mt-10 text-[#00917B] underline hover:cursor-pointer hover:text-[#2a524c] text-center" href="https://www.fatpuppet.com">check it out!</a>
                                 </p>
