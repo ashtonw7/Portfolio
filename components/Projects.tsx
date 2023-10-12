@@ -39,7 +39,7 @@ export default function Experience({ handleSection, isSelected }: Props){
                             </h2>
                         </div>
                         <div className="flex flex-col xl:flex-row justify-center items-center space-y-3 expbreak32:space-y-10 sm:mt-[0.5rem] xl:mt-[3rem] expbreak32:mb-[3rem]">
-                            <div id="details" className="font-inter font-medium text-[1rem] smallphone:text-[1.2rem] iphone:text-[1.3rem] bigphone:text-[1.5rem] xl:text-[2.2rem] aboutbreak4:text-[2.7rem] animate-fade-up animate-duration-700 animate-delay-[500ms]">
+                            <div id="details" className="font-inter font-medium text-[0.7rem] smallphone:text-[1.2rem] iphone:text-[1.3rem] bigphone:text-[1.5rem] xl:text-[2.2rem] aboutbreak4:text-[2.7rem] animate-fade-up animate-duration-700 animate-delay-[500ms]">
                                 <p>
                                     Blogging platform developed using Next.js and Tailwind.
                                 </p>
