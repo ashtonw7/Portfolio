@@ -35,10 +35,14 @@ export default function Home() {
   const [modalInfo, setShowModalInfo] = useState<modalInfo | null>();
 
   function closeModal(){
+    document.body.classList.remove("h-[100svh]");
+    document.body.classList.remove("overflow-y-hidden");
     setModalVisible(false);
   }
   function showModal(modalInfo: modalInfo){
     setShowModalInfo(modalInfo);
+    document.body.classList.add("h-[100svh]");
+    document.body.classList.add("overflow-y-hidden");
     setModalVisible(true);
   }
 
