@@ -30,7 +30,7 @@ export default function Contact({ handleSection, isSelected }: Props){
                     <div className="flex flex-col w-full h-full items-center justify-center mb-[10rem]">
                         <div id="connect" className="flex flex-col w-full bg-white aboutbreak3:mt-[2rem] doodle-border shadow-green-sm aboutbreak3:shadow-green -skew-x-12 animate-slide-in-right">
                             <h2 className="font-bowlby text-center text-[1.5rem] iphone:text-[1.8rem] aboutbreak2:text-[2.3rem] aboutbreak4:text-[2.8rem] md:text-[3rem] aboutbreak:px-[1.5rem]">
-                                Let's Connect!
+                                {"Let's Connect!"}
                             </h2>
                         </div>
                         <p id="email" className="font-inter font-medium text-[1.3rem] bigphone:text-[1.6rem] aboutbreak3:text-[2.2rem] aboutbreak4:text-[2.7rem] mt-10 aniamte-fade-up animate-duration-700 animate-delay-[500ms]">
