@@ -33,7 +33,7 @@ export default function Contact({ handleSection, isSelected }: Props){
                                 {"Let's Connect!"}
                             </h2>
                         </div>
-                        <p id="email" className="font-inter font-medium text-[1.3rem] bigphone:text-[1.6rem] aboutbreak3:text-[2.2rem] aboutbreak4:text-[2.7rem] mt-10 text-center animate-fade-up animate-duration-700 animate-delay-[500ms]">
+                        <p id="email" className="font-inter font-medium text-[1.3rem] bigphone:text-[1.6rem] aboutbreak3:text-[2.2rem] mt-10 text-center animate-fade-up animate-duration-700 animate-delay-[500ms]">
                             Shoot me an email at <a href="mailto:ashton.winters@aya.yale.edu" className="mt-2 md:mt-10 text-[#00917B] underline hover:cursor-pointer hover:text-[#2a524c] text-center">ashton.winters@aya.yale.edu</a>
                         </p>
                     </div>
