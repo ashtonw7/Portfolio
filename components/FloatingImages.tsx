@@ -16,34 +16,7 @@ const delay = 500;
 export default function FloatingImages(){    
     let numImages = 9;
 
-    let usedImages: any = [];
-
-    imageLinks.forEach((e) => {
-        usedImages.push([e, false])
-    });
-
-    let displayedImages = new Array(numImages).fill(null);
-    for (let i = 0; i < numImages; i++){
-        resetImage(i);
-    }
-
-    function resetImage(i: number){
-        if (displayedImages[i]){
-            usedImages.forEach((e: any) => {
-                if (e[0] == displayedImages[i]){
-                    e[1] = false;
-                }
-            });
-        }
-
-        let ind = randImageInt();
-        while (usedImages[ind][1]){
-            ind = randImageInt();
-        }
-
-        displayedImages[i] = imageLinks[ind];
-        usedImages[ind][1] = true;
-    }
+    let displayedImages = imageLinks.sort(() => Math.random() - 0.5); 
 
     function randImageInt(){
         return Math.floor(Math.random() * numImages);
@@ -52,7 +25,7 @@ export default function FloatingImages(){
     let images: JSX.Element[] = [];
     
     for (let i=0; i < numImages; i++){
-        images.push(<img id={i.toString()} key={i} onAnimationEnd={() => hideAndReset(i)} className="invisible h-[100px] bigphone:h-[150px] lg:h-[175px] w-auto" src={displayedImages[i]} alt="aliens" /> ) 
+        images.push(<img id={i.toString()} key={i} onAnimationEnd={() => hide(i)} className="invisible h-[100px] bigphone:h-[150px] lg:h-[175px] w-auto" src={displayedImages[i]} alt="aliens" /> ) 
     }
 
     useEffect(() => {
@@ -65,12 +38,11 @@ export default function FloatingImages(){
         return () => clearInterval(interval);
       }, []);
 
-    function hideAndReset(i: number){
-        let image = document.getElementById(i.toString());
+    function hide(i: number){
+        let image = document.getElementById(i.toString()) as HTMLImageElement;
         if (image){
             image!.classList.remove("visible");
             image!.classList.add("invisible");
-            resetImage(i);
         }
     }
 
