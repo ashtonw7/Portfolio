@@ -47,7 +47,7 @@ export default function About({ handleSection, isSelected }: Props){
                                         {"When I'm not writing code, you can find me playing board games, working out, or writing at a coffee shop."}  
                                     </p>
                                     <p className="mt-2 bigphone:mt-5">
-                                        {"I'm experienced in web dev, Python, and low level programming. In my spare time, I making web games for game jams. Check them out and more about me at the links below."}  
+                                        {"I'm experienced in web dev, Python, and low level programming. In my spare time, I making web games for game jams. Check them out and more at the links below."}  
                                     </p>
                                     <div className="hidden md:flex">
                                         <Proficiences />
