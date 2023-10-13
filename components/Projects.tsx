@@ -32,8 +32,8 @@ export default function Experience({ handleSection, isSelected }: Props){
                 <div className="flex flex-col w-[90%] bigphone:w-[80%] aboutbreak4:w-[70%] justify-between h-[95svh] bigphone:h-[95vh] items-center">
                     <div className="flex flex-1 flex-col aboutbreak3:flex-row flex-grow items-center justify-center">            
                         <div className="flex flex-col mind-w-[70%]">
-                            <div id="projectTitle" className="flex justify-center items-start bg-white aboutbreak3:mr-auto mb-5 aboutbreak2:mb-10 md:mb-0 doodle-border shadow-green-sm aboutbreak3:shadow-green -skew-x-12 animate-slide-in-right">
-                                <h2 className="border-b mb-[-1px] border-transparent font-bowlby md:text-left text-[1.5rem] iphone:text-[1.8rem] aboutbreak2:text-[2.3rem] aboutbreak4:text-[2.8rem] md:text-[3rem] aboutbreak:px-[1.5rem]">
+                            <div id="projectTitle" className="flex justify-center items-start bg-white aboutbreak3:mr-auto mb-5 doodle-border shadow-green-sm aboutbreak3:shadow-green -skew-x-12 animate-slide-in-right">
+                                <h2 className="border-b mb-[-1px] border-transparent font-bowlby md:text-left text-[1.5rem] iphone:text-[1.8rem] aboutbreak2:text-[2rem] aboutbreak4:text-[2.8rem] aboutbreak:px-[1.5rem]">
                                     Fat Puppet
                                 </h2>
                             </div>
@@ -43,7 +43,7 @@ export default function Experience({ handleSection, isSelected }: Props){
                                     <img className="w-auto h-full" alt="A desktop and mobile view demonstration of www.fatpuppet.com." src="/assets/images/fatpuppet.png" />
                                 </div>
 
-                                <div id="details" className="max-w-[90%] font-inter font-medium bigphone:text-[1.3rem] aboutbreak3:text-[1.4rem] aboutbreak4:text-[1.6rem] animate-fade-up animate-duration-700 animate-delay-[300ms]">
+                                <div id="details" className="max-w-[90%] font-inter font-medium bigphone:text-[1.3rem] aboutbreak4:text-[1.6rem] animate-fade-up animate-duration-700 animate-delay-[300ms]">
                                     <p>
                                         {"I was looking for a solution that was fast, fully customizable, and easy to use. Ultimately, I decided to just build it myself!"}
                                     </p>
