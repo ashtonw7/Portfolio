@@ -62,7 +62,7 @@ export default function Experience({ handleSection, isSelected, showModal }: Pro
         <>
             <section id="experience" className="flex flex-col justify-center items-center h-[100svh] bigphone:h-[100vh]">
                 <div className="flex flex-col w-[90%] bigphone:w-[80%] aboutbreak4:w-[70%] justify-between h-[95svh] bigphone:h-[95vh] items-center">
-                    <div className="flex flex-1 flex-col flex-grow items-center justify-around mt-5 bigphone:mt-0">            
+                    <div className="flex flex-1 flex-col flex-grow items-center justify-around mt-5 expbreak32:mt-0">            
                     
                         <div className="flex flex-col items-center bigphone:items-start bigphone:max-w-[75%] bigphone:self-start">
                             <div>
