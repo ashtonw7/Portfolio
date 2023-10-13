@@ -91,7 +91,7 @@ export default function Experience({ handleSection, isSelected, showModal }: Pro
                         <div className="flex flex-col w-full items-center bigphone:items-end bigphone:max-w-[75%] bigphone:self-end">
                             <div>
                                 <div id="airForce" className="flex justify-center items-start bg-white aboutbreak3:mr-auto mb-2 bigphone:mb-5 aboutbreak2:mb-[2rem] doodle-border shadow-green-sm aboutbreak3:shadow-green -skew-x-12 animate-slide-in-left">
-                                    <h2 className="font-bowlby md:text-left text-[1.5rem] bigphone:text-[1.8rem] aboutbreak2:text-[2rem] aboutbreak4:text-[2.8rem] md:text-[3rem] aboutbreak:px-[1.5rem]">
+                                    <h2 className="font-bowlby md:text-right text-[1.5rem] bigphone:text-[1.8rem] aboutbreak2:text-[2rem] aboutbreak4:text-[2.8rem] md:text-[3rem] aboutbreak:px-[1.5rem]">
                                         U.S. Air Force
                                     </h2>
                                 </div>
@@ -99,10 +99,10 @@ export default function Experience({ handleSection, isSelected, showModal }: Pro
 
                             <div className="flex flex-row">
                                 <div id="airForceDetails" className="font-inter font-medium text-left bigphone:text-right text-[1rem] bigphone:text-[1.3rem] aboutbreak3:text-[1.4rem] aboutbreak4:text-[1.6rem] animate-fade-up animate-duration-700 animate-delay-500">
-                                    <h3 className="font-bold text-center bigphone:text-left">
+                                    <h3 className="font-bold text-center bigphone:text-right">
                                         {"AI Research Engineer"}
                                     </h3>
-                                    <h3 className="font-bold text-center bigphone:text-left mt-[-0.5rem]">
+                                    <h3 className="font-bold text-center bigphone:text-right mt-[-0.5rem]">
                                         {"Deputy Flight Commander"}
                                     </h3>
                                     <p className="mt-1 aboutbreak4:mt-3">
