@@ -3,7 +3,6 @@ html {
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
   background-color: #fff5d8;
-  /* background-color: bg-[#FDF7F1] */
   scroll-behavior: smooth;
 }
 
@@ -22,11 +21,6 @@ html {
   border-top-left-radius: 255px 5px;
   border-top-right-radius: 5px 255px;
   border-bottom-left-radius: 5px 255px; */
-}
-
-.fix-safari-lines {
-  -webkit-backface-visibility: hidden;
-  -webkit-transform: translate3d(0, 0, 0);
 }
 
 .doodle-border-dashed {

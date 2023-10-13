@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Proficiences from "./Proficiencies";
 
 import ScrollArrow from "./ScrollArrow";
 
@@ -44,14 +43,11 @@ export default function About({ handleSection, isSelected }: Props){
                                         {"My name is Ashton Winters, and I'm a developer."}
                                     </p>
                                     <p className="mt-2 bigphone:mt-5">
-                                        {"When I'm not coding, you can find me playing board games, working out, or writing at a coffee shop."}  
-                                    </p>
-                                    <p className="mt-2 bigphone:mt-5">
                                         {"I'm experienced in web dev, Python, and low level programming. In my spare time, I making web games for game jams. Check them out and more at the links below."}  
                                     </p>
-                                    <div className="hidden md:flex">
-                                        <Proficiences />
-                                    </div>
+                                    <p className="mt-2 bigphone:mt-5">
+                                        {"When I'm not coding, you can find me playing board games, working out, or writing at a coffee shop."}  
+                                    </p>
                                 </div>
                                 
                                 <img className="flex aboutbreak3:hidden max-h-[55svh] bigphone:max-h-[55svh]" alt="A full body doodle of Ashton Winters." src="/assets/images/fullbody.png" />
@@ -59,9 +55,6 @@ export default function About({ handleSection, isSelected }: Props){
                         </div>
                         <div className="hidden aboutbreak3:flex aboutbreak3:mt-[3rem] justify-center items-center">
                             <img className="max-h-[75svh] bigphone:max-h-[75vh] w-auto mx-[10rem]" alt="A full body doodle of Ashton Winters." src="/assets/images/fullbody.png" />
-                        </div>
-                        <div className="flex md:hidden">
-                            <Proficiences />
                         </div>
                     </div>
 

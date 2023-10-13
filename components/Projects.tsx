@@ -31,8 +31,8 @@ export default function Experience({ handleSection, isSelected }: Props){
             <section id="projects" className="flex flex-col justify-center items-center h-[100svh] bigphone:h-[100vh]">
                 <div className="flex flex-col w-[90%] bigphone:w-[80%] aboutbreak4:w-[70%] justify-between h-[95svh] bigphone:h-[95vh] items-center">
                     <div className="flex flex-1 flex-col aboutbreak3:flex-row flex-grow items-center justify-center">            
-                        <div className="flex flex-col mind-w-[70%]">
-                            <div id="projectTitle" className="flex justify-center items-start bg-white aboutbreak3:mr-auto mb-5 doodle-border shadow-green-sm aboutbreak3:shadow-green -skew-x-12 animate-slide-in-right">
+                        <div className="flex flex-col items-center">
+                            <div id="projectTitle" className="flex justify-center items-start bg-white px-1 ml-auto bigphone:ml-0 mr-auto mb-5 doodle-border shadow-green-sm aboutbreak3:shadow-green -skew-x-12 animate-slide-in-right">
                                 <h2 className="border-b mb-[-1px] border-transparent font-bowlby md:text-left text-[1.5rem] iphone:text-[1.8rem] aboutbreak2:text-[2rem] aboutbreak4:text-[2.8rem] aboutbreak:px-[1.5rem]">
                                     Fat Puppet
                                 </h2>

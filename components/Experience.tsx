@@ -55,18 +55,17 @@ export default function Experience({ handleSection, isSelected, showModal }: Pro
             airForceDetails!.offsetHeight;
             airForceDetails!.classList.add("animate-fade-up");
         }
-        console.log(isSelected)
     }, [isSelected]);
     
     return(
         <>
             <section id="experience" className="flex flex-col justify-center items-center h-[100svh] bigphone:h-[100vh]">
-                <div className="flex flex-col w-[90%] bigphone:w-[80%] aboutbreak4:w-[70%] justify-between h-[95svh] bigphone:h-[95vh] items-center">
+                <div className="flex flex-col bigphone:w-[80%] aboutbreak4:w-[70%] justify-between h-[95svh] bigphone:h-[95vh] items-center">
                     <div className="flex flex-1 flex-col flex-grow items-center justify-around mt-5 expbreak32:mt-0">            
                     
-                        <div className="flex flex-col items-center bigphone:items-start bigphone:max-w-[75%] bigphone:self-start">
+                        <div className="flex flex-col max-w-[80%] items-center bigphone:items-start bigphone:self-start">
                             <div>
-                                <div id="yale" className="flex justify-center items-start bg-white aboutbreak3:mr-auto mb-5 doodle-border shadow-green-sm aboutbreak3:shadow-green -skew-x-12 animate-slide-in-right">
+                                <div id="yale" className="flex justify-center items-start bg-white px-1 mr-auto mb-3 bigphone:mb-5 doodle-border shadow-green-sm aboutbreak3:shadow-green -skew-x-12 animate-slide-in-right">
                                     <h2 className="font-bowlby md:text-left text-[1.5rem] bigphone:text-[1.8rem] aboutbreak2:text-[2rem] aboutbreak4:text-[2.8rem] aboutbreak:px-[1.5rem]">
                                         Yale University
                                     </h2>
@@ -79,18 +78,18 @@ export default function Experience({ handleSection, isSelected, showModal }: Pro
                                         {"B.S. Computer Science"}
                                     </h3>
                                     <h3 className="font-bold text-center bigphone:text-left mt-[-0.5rem]">
-                                        {"Japanese Language Certificate"}
+                                        {"Japanese Certificate"}
                                     </h3>
-                                    <p className="mt-1 aboutbreak4:mt-3">
+                                    <p className="aboutbreak4:mt-3">
                                         {"Along with computer science, I also learned Japanese and got the chance to study abroad there during the summers. I combined my two interests to build online learning tools for the Yale Japanese Department."}  
                                     </p>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="flex flex-col w-full items-center bigphone:items-end bigphone:max-w-[75%] bigphone:self-end">
+                        <div className="flex flex-col max-w-[80%] items-center bigphone:items-end bigphone:self-end mt-5 bigphone:mt-0">
                             <div>
-                                <div id="airForce" className="flex justify-center items-start bg-white aboutbreak3:mr-auto mb-5 doodle-border shadow-green-sm aboutbreak3:shadow-green -skew-x-12 animate-slide-in-left">
+                                <div id="airForce" className="flex justify-center px-1 items-start bg-white aboutbreak3:mr-auto mb-3 bigphone:mb-5 doodle-border shadow-green-sm aboutbreak3:shadow-green -skew-x-12 animate-slide-in-left">
                                     <h2 className="font-bowlby md:text-right text-[1.5rem] bigphone:text-[1.8rem] aboutbreak2:text-[2rem] aboutbreak4:text-[2.8rem] aboutbreak:px-[1.5rem]">
                                         U.S. Air Force
                                     </h2>
@@ -105,7 +104,7 @@ export default function Experience({ handleSection, isSelected, showModal }: Pro
                                     <h3 className="font-bold text-center bigphone:text-right mt-[-0.5rem]">
                                         {"Deputy Flight Commander"}
                                     </h3>
-                                    <p className="mt-1 aboutbreak4:mt-3">
+                                    <p className="aboutbreak4:mt-3">
                                         {"I commissioned out of ROTC as a Defensive Cyber Operator. As an AI Research Engineer, I test and develop visualization tools for cutting edge machine-learning tools. I am currently transitioning out of the military."}  
                                     </p>
                                 </div>

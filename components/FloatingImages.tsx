@@ -28,7 +28,6 @@ export default function FloatingImages(){
     }
 
     function resetImage(i: number){
-
         if (displayedImages[i]){
             usedImages.forEach((e: any) => {
                 if (e[0] == displayedImages[i]){
@@ -42,7 +41,7 @@ export default function FloatingImages(){
             ind = randImageInt();
         }
 
-        displayedImages[i] = imageLinks[ind]
+        displayedImages[i] = imageLinks[ind];
         usedImages[ind][1] = true;
     }
 
