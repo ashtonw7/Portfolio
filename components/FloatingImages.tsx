@@ -18,6 +18,10 @@ export default function FloatingImages(){
 
     let displayedImages = imageLinks.sort(() => Math.random() - 0.5); 
 
+    useEffect(() => {
+        displayedImages = imageLinks.sort(() => Math.random() - 0.5); 
+    });
+
     function randImageInt(){
         return Math.floor(Math.random() * numImages);
     }
