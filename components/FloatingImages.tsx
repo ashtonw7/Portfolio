@@ -103,7 +103,7 @@ export default function FloatingImages(){
 
     return(
         <>
-            <div className='flex flex-row justify-center space-x-8'>
+            <div className='flex flex-row justify-center space-x-8  max-w-[100vw] h-[100vh] overflow-x-hidden'>
 
                 { images }
 

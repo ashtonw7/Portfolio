@@ -12,10 +12,15 @@ export default function ScrollArrow({ location, up, handleSection }: Props){
         handleSection(location);
     };
 
+    let ariaLabel = "Scroll to Next Section";
+    if (up){
+        ariaLabel = "Scroll Back to Top";
+    }
+
     return(
         <>
             <div className="flex w-full">
-                <button onClick={() => scrollTo()} className="w-full mb-1">
+                <button onClick={() => scrollTo()} className="w-full mb-1" aria-label={ariaLabel}>
                     <div className="aboutbreak3:hidden flex justify-center">
                         {up ?
                             <svg className="fill-black hover:fill-[#2c2c2c] animate-bounce hover:cursor-pointer" strokeWidth="1.5" width="75" height="75" viewBox="0 0 24 24" aria-hidden="true">

@@ -19,7 +19,7 @@ module.exports = {
         "inter": ["Inter"],
       },
       boxShadow: {
-        'green': '-15px 15px #00917B',
+        'green': '-10px 10px #00917B',
         'green-sm': '-5px 5px #00917B',
       }
     },
@@ -67,7 +67,7 @@ module.exports = {
         '0%': { opacity: 0 },
         '25%': { opacity: 1 },
         '40%': { opacity: 1 },
-        '100%': { transform: 'translateY(65dvh)', opacity: 0 },
+        '100%': { transform: 'translateY(57vh)', opacity: 0 },
       },
       bounce: {
         '0%': { transform: 'translateY(-0%)' },

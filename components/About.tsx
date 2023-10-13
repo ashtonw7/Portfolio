@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Proficiences from "./Proficiencies";
 
 import ScrollArrow from "./ScrollArrow";
 
@@ -26,33 +27,44 @@ export default function About({ handleSection, isSelected }: Props){
     
     return(
         <>
-            <section id="about" className="flex justify-center items-end h-[100svh]">
-                <div className="flex flex-col w-[80%] aboutbreak4:w-[70%] h-[95%] justify-between items-center">
-                    <div className="flex flex-col aboutbreak3:flex-row flex-grow justify-center">            
+            <section id="about" className="flex flex-col justify-center items-center h-[100svh] bigphone:h-[100vh]">
+                <div className="flex flex-col w-[80%] aboutbreak4:w-[70%] justify-between h-[95svh] bigphone:h-[95vh] items-center">
+                    <div className="flex flex-1 flex-col aboutbreak3:flex-row flex-grow items-center justify-center">            
                         
-                        <div className="flex flex-col">
-                            <div id="intro" className="flex justify-center bg-white aboutbreak3:mr-auto mb-5 aboutbreak3:mt-[2rem] aboutbreak2:mb-10 md:mb-0 doodle-border shadow-green-sm aboutbreak3:shadow-green -skew-x-12 animate-slide-in-right">
-                                <h2 className="font-bowlby md:text-left text-[1.5rem] iphone:text-[1.8rem] aboutbreak2:text-[2.3rem] aboutbreak4:text-[2.8rem] md:text-[3rem] aboutbreak:px-[1.5rem]">
+                        <div className="flex flex-col min-w-[70%]">
+                            <div id="intro" className="flex justify-center items-start bg-white aboutbreak3:mr-auto mb-5 aboutbreak2:mb-10 md:mb-0 doodle-border shadow-green-sm aboutbreak3:shadow-green -skew-x-12 animate-slide-in-right">
+                                <h2 className="border-b mb-[-1px] border-transparent font-bowlby md:text-left text-[1.5rem] iphone:text-[1.8rem] aboutbreak2:text-[2.3rem] aboutbreak4:text-[2.8rem] md:text-[3rem] aboutbreak:px-[1.5rem]">
                                     Nice to meet you!
                                 </h2>
                             </div>
 
-                            <div className="flex flex-row">
-                                <div id="aboutDetails" className="font-inter font-medium text-[1.3rem] bigphone:text-[1.6rem] aboutbreak3:text-[2.2rem] aboutbreak4:text-[2.7rem] animate-fade-up animate-duration-700 animate-delay-[500ms]">
+                            <div className="flex flex-row justify-between">
+                                <div id="aboutDetails" className="max-w-[70%] font-inter font-medium bigphone:text-[1.3rem] aboutbreak3:text-[1.4rem] aboutbreak4:text-[1.6rem] animate-fade-up animate-duration-700 animate-delay-[300ms]">
                                     <p>
-                                        {"My name is Ashton Winters, and I love all things tech."}
+                                        {"My name is Ashton Winters, and I'm a developer."}
                                     </p>
-                                    <p className="mt-5 md:mt-10">
+                                    <p className="mt-2 bigphone:mt-5">
                                         {"When I'm not writing code, you can find me playing board games, working out, or writing at a coffee shop."}  
                                     </p>
+                                    <p className="mt-2 bigphone:mt-5">
+                                        {"I'm experienced in web dev, Python, and low level programming. In my spare time, I making web games for game jams. Check them out and more about me at the links below."}  
+                                    </p>
+                                    <div className="hidden md:flex">
+                                        <Proficiences />
+                                    </div>
                                 </div>
-                                <img className="flex aboutbreak3:hidden max-h-[55svh] bigphone:max-h-[60svh]" src="/assets/images/fullbody.png" />
+                                
+                                <img className="flex aboutbreak3:hidden max-h-[55svh] bigphone:max-h-[55svh]" alt="A full body doodle of Ashton Winters." src="/assets/images/fullbody.png" />
                             </div>
                         </div>
-                        <div className="hidden aboutbreak3:flex justify-center items-center">
-                            <img className="max-h-[80svh] mx-[10rem]" src="/assets/images/fullbody.png" />
+                        <div className="hidden aboutbreak3:flex aboutbreak3:mt-[3rem] justify-center items-center">
+                            <img className="max-h-[75svh] bigphone:max-h-[75vh] w-auto mx-[10rem]" alt="A full body doodle of Ashton Winters." src="/assets/images/fullbody.png" />
+                        </div>
+                        <div className="flex md:hidden">
+                            <Proficiences />
                         </div>
                     </div>
+
                     <ScrollArrow handleSection={handleSection} location="experience" up={false} />
                 </div>
             </section>

@@ -1,5 +1,6 @@
 'use client';
 
+import { Helmet } from 'react-helmet'
 import { useEffect, useState } from 'react';
 
 import NavBar from '@/components/NavBar';
@@ -100,18 +101,25 @@ export default function Home() {
   }, [currSection]);
   
   return (
-    <main>
-      <NavBar handleSection={handleSection} />
-      <div id="wrapper" className="relative overflow-x-clip">
-        {
-          modalVisible ? <DetailsModal closeModal={closeModal} text={modalInfo!.text} place={modalInfo!.place} title={modalInfo!.title} image={modalInfo!.image}  /> : ''
-        }
-        <Heading handleSection={handleSection} isSelected={home} />
-        <About handleSection={handleSection} isSelected={about} />
-        <Experience handleSection={handleSection} isSelected={experience} showModal={showModal} />
-        <Projects handleSection={handleSection} isSelected={projects}/>
-        <Contact handleSection={handleSection} isSelected={contact} />
-      </div>
-    </main>
+    <>
+        <Helmet>
+          <html lang="en" />
+          <meta content="width=device-width, initial-scale=1" name="viewport" />
+          <link rel="icon" href="/favicon.ico" />
+        </Helmet>
+        <main>
+          <NavBar handleSection={handleSection} />
+          <div id="wrapper" className="relative">
+            {
+              modalVisible ? <DetailsModal closeModal={closeModal} text={modalInfo!.text} place={modalInfo!.place} title={modalInfo!.title} image={modalInfo!.image}  /> : ''
+            }
+            <Heading handleSection={handleSection} isSelected={home} />
+            <About handleSection={handleSection} isSelected={about} />
+            <Experience handleSection={handleSection} isSelected={experience} showModal={showModal} />
+            <Projects handleSection={handleSection} isSelected={projects}/>
+            <Contact handleSection={handleSection} isSelected={contact} />
+          </div>
+        </main>
+    </>
   )
 }

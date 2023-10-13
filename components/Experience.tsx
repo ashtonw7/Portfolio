@@ -33,39 +33,85 @@ let airForceBlurb = [
 export default function Experience({ handleSection, isSelected, showModal }: Props){
     useEffect(() => {
         if (isSelected){
-            let firstJob = document.getElementById("firstJob");
-            let secondJob = document.getElementById("secondJob");
-            let proficiencies = document.getElementById("proficiencies")
+            let yale = document.getElementById("yale");
+            let yaleDetails = document.getElementById("yaleDetails");
 
-            firstJob!.classList.remove("animate-fade-up");
-            firstJob!.offsetHeight;
-            firstJob!.classList.add("animate-fade-up");
+            let airForce = document.getElementById("airForce");
+            let airForceDetails = document.getElementById("airForceDetails");
 
-            secondJob!.classList.remove("animate-fade-up");
-            secondJob!.offsetHeight;
-            secondJob!.classList.add("animate-fade-up");
+            yale!.classList.remove("animate-slide-in-right");
+            yale!.offsetHeight;
+            yale!.classList.add("animate-slide-in-right");
 
-            proficiencies!.classList.remove("animate-fade-up");
-            proficiencies!.offsetHeight;
-            proficiencies!.classList.add("animate-fade-up");
+            yaleDetails!.classList.remove("animate-fade-up");
+            yaleDetails!.offsetHeight;
+            yaleDetails!.classList.add("animate-fade-up");
+
+            airForce!.classList.remove("animate-slide-in-left");
+            airForce!.offsetHeight;
+            airForce!.classList.add("animate-slide-in-left");
+
+            airForceDetails!.classList.remove("animate-fade-up");
+            airForceDetails!.offsetHeight;
+            airForceDetails!.classList.add("animate-fade-up");
         }
         console.log(isSelected)
     }, [isSelected]);
     
     return(
         <>
-            <section id="experience" className="flex justify-center items-end h-[100svh]">
-                <div className="flex flex-col w-[80%] lg:w-[90%] h-[95%] justify-start items-center">
-                    <div className="flex flex-col expbreak32:flex-row h-full w-full expbreak32:w-auto  my-0 xler:my-10 expbreak32:mb-0 justify-around mt-0 expbreak4:mt-3">
-                        <div id="firstJob" className="animate-fade-up animate-duration-[1000ms] animate-ease-in-out animate-delay-100">
-                            <ExperienceCard image='/assets/images/yale.png' place={yalePlace} title={yaleTitle} shortTitle={yaleTitleShort} text={yaleBlurb} showModal={showModal} />
+            <section id="experience" className="flex flex-col justify-center items-center h-[100svh] bigphone:h-[100vh]">
+                <div className="flex flex-col w-[90%] bigphone:w-[80%] aboutbreak4:w-[70%] justify-between h-[95svh] bigphone:h-[95vh] items-center">
+                    <div className="flex flex-1 flex-col flex-grow items-center justify-around">            
+                    
+                        <div className="flex flex-col items-center bigphone:items-start bigphone:max-w-[75%] bigphone:self-start">
+                            <div>
+                                <div id="yale" className="flex justify-center items-start bg-white aboutbreak3:mr-auto mb-2 bigphone:mb-5 aboutbreak2:mb-[2rem] doodle-border shadow-green-sm aboutbreak3:shadow-green -skew-x-12 animate-slide-in-right">
+                                    <h2 className="font-bowlby md:text-left text-[1.5rem] bigphone:text-[1.8rem] aboutbreak2:text-[2rem] aboutbreak4:text-[2.8rem] md:text-[3rem] aboutbreak:px-[1.5rem]">
+                                        Yale University
+                                    </h2>
+                                </div>
+                            </div>
+
+                            <div className="flex flex-row">
+                                <div id="yaleDetails" className="font-inter font-medium text-[1rem] bigphone:text-[1.3rem] aboutbreak3:text-[1.4rem] aboutbreak4:text-[1.6rem] animate-fade-up animate-duration-700 animate-delay-[300ms]">
+                                    <h3 className="font-bold text-center bigphone:text-left">
+                                        {"B.S. Computer Science"}
+                                    </h3>
+                                    <h3 className="font-bold text-center bigphone:text-left mt-[-0.5rem]">
+                                        {"Japanese Language Certificate"}
+                                    </h3>
+                                    <p className="mt-1 aboutbreak4:mt-3">
+                                        {"Along with computer science, I also learned Japanese and got the chance to study abroad there during the summers. I combined my two interests to build online learning tools for the Yale Japanese Department."}  
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                        <div id="secondJob" className="animate-fade-up animate-duration-[1000ms] animate-ease-in-out animate-delay-[500ms] expbreak32:mx-10"> 
-                            <ExperienceCard image='/assets/images/airforce.png' place={airForcePlace} title={airForceTitle} shortTitle={shortAirForceTitle} text={airForceBlurb} showModal={showModal} />
+
+                        <div className="flex flex-col w-full items-center bigphone:items-end bigphone:max-w-[75%] bigphone:self-end">
+                            <div>
+                                <div id="airForce" className="flex justify-center items-start bg-white aboutbreak3:mr-auto mb-2 bigphone:mb-5 aboutbreak2:mb-[2rem] doodle-border shadow-green-sm aboutbreak3:shadow-green -skew-x-12 animate-slide-in-left">
+                                    <h2 className="font-bowlby md:text-left text-[1.5rem] bigphone:text-[1.8rem] aboutbreak2:text-[2rem] aboutbreak4:text-[2.8rem] md:text-[3rem] aboutbreak:px-[1.5rem]">
+                                        U.S. Air Force
+                                    </h2>
+                                </div>
+                            </div>
+
+                            <div className="flex flex-row">
+                                <div id="airForceDetails" className="font-inter font-medium text-left bigphone:text-right text-[1rem] bigphone:text-[1.3rem] aboutbreak3:text-[1.4rem] aboutbreak4:text-[1.6rem] animate-fade-up animate-duration-700 animate-delay-500">
+                                    <h3 className="font-bold text-center bigphone:text-left">
+                                        {"AI Research Engineer"}
+                                    </h3>
+                                    <h3 className="font-bold text-center bigphone:text-left mt-[-0.5rem]">
+                                        {"Deputy Flight Commander"}
+                                    </h3>
+                                    <p className="mt-1 aboutbreak4:mt-3">
+                                        {"I commissioned out of ROTC as a Defensive Cyber Operator. As an AI Research Engineer, I test and develop visualization tools for cutting edge machine-learning tools. I am currently transitioning out of the military."}  
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                        <div id="proficiencies" className="animate-fade-up animate-duration-[1000ms] animate-ease-in-out animate-delay-[900ms]">    
-                            <ProficiencesCard />
-                        </div>
+
                     </div>
                     <ScrollArrow handleSection={handleSection} location="projects" up={false} />
                 </div>
