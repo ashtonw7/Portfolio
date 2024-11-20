@@ -1,5 +1,5 @@
-This is my portfolio website built with Next.js and Tailwind! You can see a live version at [ashtonwinters.com](ashtonwinters.com).
-The website is accessible, responsive, and features some fun doodles I made. Check out my other website too, [www.fatpuppet.com](fatpuppet.com).
+This is my portfolio website built with Next.js and Tailwind! You can see a live version at [https://ashtonwinters.com](ashtonwinters.com).
+The website is accessible, responsive, and features some fun doodles I made. Check out my other website too, [https://www.fatpuppet.com](fatpuppet.com).
 
 Feel free to look at the code, but be warned--I need to clean up the readability some of Tailwind CSS. I love Tailwind for little sites like this though!
 
